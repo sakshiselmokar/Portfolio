@@ -23,11 +23,20 @@ function Projects() {
 
           <Col md={6} lg={4} className="project-card">
             <ProjectCard
+              imgPath={Resultify}
+              title="Result Management"
+              description="Resultify is a web-based application simplifying student result management, featuring student and admin portals for result access and upload, with responsive design and easy integration. "
+              ghLink="https://github.com/sakshiselmokar/Resultify"
+              demoLink="https://sakshiselmokar.github.io/Resultify/"
+            />
+          </Col>
+                <Col md={6} lg={4} className="project-card">
+            <ProjectCard
               imgPath={Portfolio}
               title="Portfolio Website"
               description="My personal Portfolio Website build with React and Bootstrap. It is fully responsive website which supports both dark and light mode."
               ghLink="https://github.com/sakshiselmokar/Portfolio"
-              demoLink=""
+              demoLink="https://sakshiselmokar.netlify.app/"
             />
           </Col>
           <Col md={6} lg={4} className="project-card">
@@ -40,15 +49,7 @@ function Projects() {
             />
           </Col>
 
-          <Col md={6} lg={4} className="project-card">
-            <ProjectCard
-              imgPath={Resultify}
-              title="Result Management"
-              description="Resultify is a web-based application simplifying student result management, featuring student and admin portals for result access and upload, with responsive design and easy integration. "
-              ghLink="https://github.com/sakshiselmokar/Resultify"
-              demoLink="https://sakshiselmokar.github.io/Resultify/"
-            />
-          </Col>
+        
           <Col md={6} lg={4} className="project-card">
             <ProjectCard
               imgPath={Ecart}
