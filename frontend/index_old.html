@@ -215,7 +215,7 @@ footer{border-top:1px solid var(--bd);padding:1.75rem 2rem;text-align:center;fon
 @keyframes blink{50%{opacity:0}}
 .caret{display:inline-block;width:7px;height:13px;background:var(--blue);animation:blink .9s step-end infinite;vertical-align:middle;margin-left:2px}
 
-/* ── PROJECT SECTION BADGES ── */
+/* ══ PROJECT SECTION BADGES ══ */
 .sec-badges{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.75rem}
 .sec-badge{display:inline-flex;align-items:center;gap:5px;font-size:10px;font-family:var(--mono);padding:4px 10px;border-radius:20px;border:1px solid;letter-spacing:.3px;position:relative;overflow:hidden;transition:all .2s}
 .sec-badge::before{content:'';position:absolute;inset:0;opacity:0;transition:opacity .2s}
@@ -224,28 +224,34 @@ footer{border-top:1px solid var(--bd);padding:1.75rem 2rem;text-align:center;fon
 .sb-cv{color:#34d399;border-color:rgba(52,211,153,.35);background:rgba(16,185,129,.08)}
 .sb-genai{color:#60a5fa;border-color:rgba(96,165,250,.35);background:rgba(59,130,246,.08)}
 .sb-prod{color:#fbbf24;border-color:rgba(251,191,36,.35);background:rgba(245,158,11,.08)}
-.sb-agentic{color:#f472b6;border-color:rgba(244,114,182,.35);background:rgba(236,72,153,.08)}
 .badge-dot{width:5px;height:5px;border-radius:50%;background:currentColor;animation:pulse-dot 2s infinite}
 @keyframes pulse-dot{0%,100%{opacity:1}50%{opacity:.4}}
 
-/* ── AI LABS ── */
+/* ══ AI LABS SECTION — CONSOLE AESTHETIC ══ */
 #ailabs{padding-top:1.5rem}
 .labs-header-bar{background:var(--bg1);border:1px solid var(--bd);border-radius:12px;padding:.75rem 1.25rem;display:flex;align-items:center;gap:1rem;margin-bottom:1.75rem;font-family:var(--mono);font-size:11px}
 .labs-status{display:flex;align-items:center;gap:.5rem;color:var(--green)}.labs-status::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--green);animation:pulse-dot 2s infinite}
 .labs-env{color:var(--t3);margin-left:auto}
+
 .lab-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.25rem}
+
+/* Lab card — terminal window style */
 .lab-card{background:var(--bg0);border:1px solid var(--bd2);border-radius:14px;overflow:hidden;transition:all .25s;cursor:pointer;display:flex;flex-direction:column}
 .lab-card:hover{border-color:var(--blue);box-shadow:0 0 0 1px rgba(59,130,246,.15),0 16px 40px rgba(0,0,0,.5)}
 .lab-card:hover .lab-card-glow{opacity:1}
+
+/* Terminal title bar */
 .lab-titlebar{background:var(--bg2);border-bottom:1px solid var(--bd);padding:9px 14px;display:flex;align-items:center;gap:8px}
 .lab-wdot{width:10px;height:10px;border-radius:50%}
 .lab-filename{font-family:var(--mono);font-size:10px;color:var(--t3);margin-left:auto}
+
+/* Console body */
 .lab-console{padding:1.1rem 1.25rem;flex:1;position:relative;overflow:hidden}
 .lab-card-glow{position:absolute;top:0;left:0;right:0;height:1px;opacity:0;transition:opacity .3s}
 .lc-sg .lab-card-glow{background:linear-gradient(90deg,transparent,#8b5cf6,transparent)}
 .lc-af .lab-card-glow{background:linear-gradient(90deg,transparent,#10b981,transparent)}
 .lc-dm .lab-card-glow{background:linear-gradient(90deg,transparent,#ef4444,transparent)}
-.lc-sd .lab-card-glow{background:linear-gradient(90deg,transparent,#f472b6,transparent)}
+
 .lab-prompt{font-family:var(--mono);font-size:11px;color:var(--t3);margin-bottom:.65rem;display:flex;align-items:center;gap:.4rem}
 .lab-prompt-sym{color:var(--blue)}
 .lab-name{font-size:1.05rem;font-weight:600;color:var(--t0);margin-bottom:.25rem;letter-spacing:-.2px}
@@ -253,28 +259,42 @@ footer{border-top:1px solid var(--bd);padding:1.75rem 2rem;text-align:center;fon
 .lc-sg .lab-type{color:#a78bfa;background:rgba(139,92,246,.1);border:1px solid rgba(139,92,246,.2)}
 .lc-af .lab-type{color:#34d399;background:rgba(16,185,129,.1);border:1px solid rgba(16,185,129,.2)}
 .lc-dm .lab-type{color:#f87171;background:rgba(239,68,68,.1);border:1px solid rgba(239,68,68,.2)}
-.lc-sd .lab-type{color:#f472b6;background:rgba(236,72,153,.1);border:1px solid rgba(244,114,182,.2)}
 .lab-desc{font-size:12.5px;color:var(--t2);line-height:1.6;margin-bottom:.85rem}
+
+/* Mini preview inside card */
 .lab-preview{background:var(--bg1);border:1px solid var(--bd);border-radius:8px;padding:.65rem .85rem;margin-bottom:.85rem;font-family:var(--mono);font-size:10px}
 .lab-preview-line{color:var(--t3);line-height:1.9;display:flex;gap:.5rem}
 .lab-preview-line .ok{color:var(--green)}
 .lab-preview-line .info{color:var(--blue)}
 .lab-preview-line .warn{color:var(--amber)}
+
 .lab-foot{padding:.75rem 1.25rem;border-top:1px solid var(--bd);display:flex;align-items:center;justify-content:space-between}
 .lab-open{font-size:11px;font-family:var(--mono);padding:5px 14px;border-radius:6px;border:1px solid var(--bd2);background:transparent;color:var(--t2);transition:all .15s}
 .lc-sg:hover .lab-open{border-color:#8b5cf6;color:#a78bfa}
 .lc-af:hover .lab-open{border-color:#10b981;color:#34d399}
 .lc-dm:hover .lab-open{border-color:#ef4444;color:#f87171}
-.lc-sd:hover .lab-open{border-color:#f472b6;color:#f9a8d4}
+.lab-tag-row{display:flex;gap:.3rem;flex-wrap:wrap}
 
-/* ── LAB MODAL TABS ── */
+/* VIDEO PLACEHOLDER — proper style */
+.video-ph{background:var(--bg0);border:1px solid var(--bd2);border-radius:12px;aspect-ratio:16/9;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;position:relative;overflow:hidden}
+.video-ph::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(59,130,246,.04) 0%,transparent 70%)}
+.video-ph-icon{width:64px;height:64px;border-radius:50%;border:2px solid rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;font-size:24px;background:rgba(255,255,255,.04);transition:all .2s}
+.video-ph:hover .video-ph-icon{border-color:rgba(59,130,246,.5);background:rgba(59,130,246,.1)}
+.video-ph-title{font-size:.95rem;font-weight:500;color:var(--t0);text-align:center}
+.video-ph-sub{font-size:11px;color:var(--t3);font-family:var(--mono);text-align:center}
+.video-ph-badge{position:absolute;top:14px;left:14px;font-size:10px;font-family:var(--mono);background:rgba(0,0,0,.6);border:1px solid var(--bd2);border-radius:4px;padding:3px 9px;color:var(--t3)}
+.video-ph-swap{position:absolute;bottom:14px;right:14px;font-size:10px;font-family:var(--mono);background:rgba(0,0,0,.6);border:1px dashed var(--bd2);border-radius:4px;padding:3px 9px;color:var(--t3)}
+.video-swap-hint{background:var(--bg2);border:1px solid var(--bd);border-radius:8px;padding:.75rem 1rem;margin-top:.85rem;font-family:var(--mono);font-size:11px;color:var(--t3);line-height:1.9}
+.video-swap-hint .swap-label{color:var(--amber);margin-bottom:.3rem;font-size:10px;text-transform:uppercase;letter-spacing:.5px}
+
+/* ══ LAB MODAL TABS ══ */
 .lab-tabs{display:flex;gap:0;border-bottom:1px solid var(--bd);padding:0 1.5rem}
 .lab-tab{font-size:12px;font-family:var(--mono);padding:.7rem 1rem;color:var(--t2);cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px;transition:all .15s;white-space:nowrap}
 .lab-tab:hover{color:var(--t1)}
 .lab-tab.on{color:var(--blue);border-bottom-color:var(--blue)}
 .lab-panel{display:none;padding:1.5rem}.lab-panel.on{display:block}
 
-/* ── PIPELINE ── */
+/* ══ PIPELINE ANIMATION ══ */
 .pipeline-wrap{display:flex;flex-direction:column;align-items:center;gap:0;margin:1.25rem 0}
 .pipe-node{background:var(--bg3);border:1px solid var(--bd2);border-radius:10px;padding:.6rem 1.25rem;font-size:12px;font-family:var(--mono);color:var(--t2);text-align:center;min-width:200px;position:relative;transition:all .4s}
 .pipe-node.active{border-color:var(--blue);color:var(--blue);background:var(--dim);box-shadow:0 0 16px rgba(59,130,246,.15)}
@@ -284,7 +304,7 @@ footer{border-top:1px solid var(--bd);padding:1.75rem 2rem;text-align:center;fon
 @keyframes flow-down{to{top:100%}}
 .pipe-arrow-head{width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent;border-top:6px solid var(--bd2);margin:0 auto}
 
-/* ── STUDYGENIE DEMO ── */
+/* ══ STUDYGENIE DEMO ══ */
 .upload-zone{border:2px dashed var(--bd2);border-radius:12px;padding:2rem;text-align:center;cursor:pointer;transition:all .2s;position:relative}
 .upload-zone:hover,.upload-zone.drag{border-color:var(--blue);background:var(--dim)}
 .upload-zone-icon{font-size:32px;margin-bottom:.75rem;display:block}
@@ -302,7 +322,7 @@ footer{border-top:1px solid var(--bd);padding:1.75rem 2rem;text-align:center;fon
 .quiz-opt.wrong{border-color:#ef4444;color:#ef4444}
 .opt-letter{width:20px;height:20px;border-radius:5px;background:var(--bg3);border:1px solid var(--bd2);display:flex;align-items:center;justify-content:center;font-size:10px;font-family:var(--mono);flex-shrink:0}
 
-/* ── VOICE DEMO ── */
+/* ══ VOICE DEMO ══ */
 .mic-wrap{display:flex;flex-direction:column;align-items:center;padding:2rem 1rem;gap:1.5rem}
 .mic-btn{width:80px;height:80px;border-radius:50%;background:var(--bg3);border:2px solid var(--bd2);display:flex;align-items:center;justify-content:center;font-size:30px;cursor:pointer;position:relative;transition:all .2s}
 .mic-btn:hover{border-color:var(--blue);background:var(--dim)}
@@ -316,7 +336,18 @@ footer{border-top:1px solid var(--bd);padding:1.75rem 2rem;text-align:center;fon
 .voice-bubble.show{display:block;animation:fade-up .3s ease}
 @keyframes fade-up{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
 
-/* ── DERMAI ── */
+/* ══ AIRFLOW DEMO ══ */
+.video-placeholder{background:var(--bg0);border:1px solid var(--bd2);border-radius:12px;aspect-ratio:16/9;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;cursor:pointer;position:relative;overflow:hidden;transition:all .2s}
+.video-placeholder:hover{border-color:var(--blue)}
+.video-placeholder::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(59,130,246,.04),transparent 70%)}
+.play-btn{width:64px;height:64px;border-radius:50%;background:rgba(59,130,246,.15);border:2px solid rgba(59,130,246,.4);display:flex;align-items:center;justify-content:center;font-size:24px;transition:all .2s}
+.video-placeholder:hover .play-btn{background:rgba(59,130,246,.25);border-color:var(--blue)}
+.code-terminal{background:#040608;border:1px solid var(--bd);border-radius:10px;overflow:hidden;font-family:var(--mono);font-size:12px}
+.code-bar{background:var(--bg2);padding:8px 14px;display:flex;align-items:center;gap:6px;border-bottom:1px solid var(--bd)}
+.code-body{padding:1rem;color:#e8f4e8;line-height:1.9;min-height:140px}
+.c-kw{color:#c792ea}.c-fn{color:#82aaff}.c-str{color:#c3e88d}.c-cm{color:#546e7a}.c-num{color:#f78c6c}
+
+/* ══ DERMAI DEMO ══ */
 .drop-zone{border:2px dashed var(--bd2);border-radius:12px;padding:2.5rem 1.5rem;text-align:center;cursor:pointer;transition:all .2s;position:relative}
 .drop-zone:hover,.drop-zone.drag-over{border-color:var(--blue);background:var(--dim)}
 .drop-input{position:absolute;inset:0;opacity:0;cursor:pointer}
@@ -326,61 +357,55 @@ footer{border-top:1px solid var(--bd);padding:1.75rem 2rem;text-align:center;fon
 .conf-fill{height:100%;border-radius:4px;width:0;transition:width 1.1s cubic-bezier(.34,1.2,.64,1)}
 .conf-pct{font-family:var(--mono);font-size:11px;color:var(--t2);text-align:right}
 
-/* ── ENHANCED CHAT MIC ── */
+/* ══ ENHANCED CHAT — voice btn ══ */
 .cw-mic{background:var(--bg3);border:1px solid var(--bd);border-radius:10px;color:var(--t2);width:42px;height:42px;font-size:16px;flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:all .2s}
 .cw-mic:hover{border-color:var(--blue);color:var(--blue)}
 .cw-mic.active{border-color:var(--blue);color:var(--blue);background:var(--dim);animation:mic-pulse 1.5s ease-in-out infinite}
 
-/* ── TYPEWRITER ── */
+/* ══ TYPING EFFECT ══ */
 @keyframes type-cursor{50%{border-color:transparent}}
 .typewriter{border-right:2px solid var(--blue);animation:type-cursor .7s step-end infinite;display:inline}
 
-/* ── SCROLL PROGRESS ── */
+/* ══ SCROLL PROGRESS BAR ══ */
 .scroll-bar{position:fixed;top:0;left:0;height:2px;background:linear-gradient(90deg,var(--blue),var(--purple));z-index:200;width:0%;transition:width .1s linear}
 
-/* ── BACK TO TOP ── */
+/* ══ BACK TO TOP ══ */
 .back-top{position:fixed;bottom:2rem;right:2rem;width:40px;height:40px;border-radius:10px;background:var(--bg3);border:1px solid var(--bd2);color:var(--t2);font-size:16px;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .2s;opacity:0;pointer-events:none;z-index:90}
 .back-top.show{opacity:1;pointer-events:all}
 .back-top:hover{border-color:var(--blue);color:var(--blue);transform:translateY(-2px)}
 
-/* ── TOAST ── */
+/* ══ TOAST NOTIFICATION ══ */
 .toast-wrap{position:fixed;bottom:2rem;left:50%;transform:translateX(-50%);z-index:500;display:flex;flex-direction:column;gap:.5rem;align-items:center;pointer-events:none}
 .toast{background:var(--bg2);border:1px solid var(--bd2);border-radius:12px;padding:.75rem 1.25rem;font-size:13px;color:var(--t0);display:flex;align-items:center;gap:.75rem;box-shadow:0 8px 32px rgba(0,0,0,.6);opacity:0;transform:translateY(12px);transition:all .3s;pointer-events:none;max-width:400px;text-align:center}
 .toast.show{opacity:1;transform:translateY(0)}
 .toast.success{border-color:rgba(16,185,129,.4);background:rgba(16,185,129,.08)}
 .toast.error{border-color:rgba(239,68,68,.4);background:rgba(239,68,68,.08)}
 
-/* ── CURRENTLY BUILDING ── */
+/* ══ CURRENTLY BUILDING BADGE ══ */
 .building-badge{display:inline-flex;align-items:center;gap:7px;font-family:var(--mono);font-size:11px;color:var(--green);background:rgba(16,185,129,.07);border:1px solid rgba(16,185,129,.2);padding:5px 14px;border-radius:20px;margin-bottom:1rem}
 .building-dot{width:6px;height:6px;border-radius:50%;background:var(--green);animation:pulse-dot 2s infinite;flex-shrink:0}
 
-/* ── TOOLTIP ── */
+/* ══ TOOLTIP ══ */
 [data-tip]{position:relative}
 [data-tip]::after{content:attr(data-tip);position:absolute;bottom:calc(100% + 8px);left:50%;transform:translateX(-50%);background:var(--bg4);border:1px solid var(--bd2);border-radius:6px;padding:5px 10px;font-size:11px;font-family:var(--mono);color:var(--t1);white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .15s;z-index:99}
 [data-tip]:hover::after{opacity:1}
 
-/* ── FORM VALIDATION ── */
+/* ══ FORM VALIDATION STATES ══ */
 .fi.error{border-color:#ef4444}
 .fi.ok-field{border-color:var(--green)}
 .field-err{font-size:11px;color:#ef4444;font-family:var(--mono);margin-top:.3rem;display:none}
 .field-err.show{display:block}
 
-/* ── CHAT COUNTER ── */
+/* ══ CHAT EMPTY STATE / CHAR COUNTER ══ */
 .cw-counter{font-size:10px;font-family:var(--mono);color:var(--t3);padding:0 .85rem .4rem;text-align:right}
 
-/* ── PC FOOT PRIMARY ── */
+/* ══ PROJECT CARD — open indicator ══ */
 .pc-foot .pbt.primary{background:var(--dim);border-color:var(--blue);color:var(--blue)}
 
-/* ── FOOTER LINKS ── */
+/* ══ FOOTER LINKS ══ */
 footer a{color:var(--t3);transition:color .15s}footer a:hover{color:var(--blue)}
 
-/* ── CODE TERMINAL ── */
-.code-terminal{background:#040608;border:1px solid var(--bd);border-radius:10px;overflow:hidden;font-family:var(--mono);font-size:12px}
-.code-bar{background:var(--bg2);padding:8px 14px;display:flex;align-items:center;gap:6px;border-bottom:1px solid var(--bd)}
-.code-body{padding:1rem;color:#e8f4e8;line-height:1.9;min-height:140px}
-.c-kw{color:#c792ea}.c-fn{color:#82aaff}.c-str{color:#c3e88d}.c-cm{color:#546e7a}.c-num{color:#f78c6c}
-
-/* ── MOBILE ── */
+/* ══ MOBILE ══ */
 @media(max-width:700px){
   .hero{grid-template-columns:1fr}
   .net-wrap{display:none}
@@ -396,8 +421,13 @@ footer a{color:var(--t3);transition:color .15s}footer a:hover{color:var(--blue)}
 </head>
 <body>
 
+<!-- SCROLL PROGRESS -->
 <div class="scroll-bar" id="scrollBar"></div>
+
+<!-- BACK TO TOP -->
 <button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" data-tip="Back to top">↑</button>
+
+<!-- TOAST -->
 <div class="toast-wrap" id="toastWrap"></div>
 
 <!-- CMD PALETTE -->
@@ -426,17 +456,17 @@ footer a{color:var(--t3);transition:color .15s}footer a:hover{color:var(--blue)}
 
 <div class="page">
 
-<!-- HERO -->
+<!-- ════ HERO ════ -->
 <section id="home">
   <div class="hero">
     <div>
-      <div class="building-badge"><div class="building-dot"></div>Currently: Agentic SDLC Platform (personal) · Workforce AI @ Sutherland</div>
+      <div class="building-badge"><div class="building-dot"></div>Currently: Workforce Optimization AI @ Sutherland</div>
       <div class="hero-eyebrow">AI/ML ENGINEER · SUTHERLAND GLOBAL · HYDERABAD</div>
       <h1>Sakshi<br><span class="blue">Selmokar</span></h1>
       <p class="hero-desc">Building enterprise AI systems at Sutherland Global — forecasting pipelines on Azure ML, RAG-based Smart Assist with Claude, computer vision workflows, and applied AI that ships to production.</p>
       <div class="ctas">
         <button class="btn btn-p" onclick="go('chat')" data-tip="Powered by Claude AI">⚡ Chat with Sakshi AI</button>
-        <button class="btn" onclick="go('projects')" data-tip="5 real projects">⟶ Projects</button>
+        <button class="btn" onclick="go('projects')" data-tip="4 real projects">⟶ Projects</button>
         <button class="btn" onclick="go('resume')" data-tip="Download PDF">↓ Resume</button>
       </div>
     </div>
@@ -457,7 +487,7 @@ footer a{color:var(--t3);transition:color .15s}footer a:hover{color:var(--blue)}
   </div>
 </section>
 
-<!-- STATS -->
+<!-- ════ STATS ════ -->
 <section class="sec" style="padding-top:2rem">
   <div class="sec-tag">BY THE NUMBERS</div>
   <div class="sec-title">Impact Metrics</div>
@@ -471,7 +501,7 @@ footer a{color:var(--t3);transition:color .15s}footer a:hover{color:var(--blue)}
   </div>
 </section>
 
-<!-- EXPERIENCE -->
+<!-- ════ EXPERIENCE ════ -->
 <section class="sec" id="experience">
   <div class="sec-tag">EXPERIENCE</div>
   <div class="sec-title">Work History</div>
@@ -504,37 +534,18 @@ footer a{color:var(--t3);transition:color .15s}footer a:hover{color:var(--blue)}
   </div>
 </section>
 
-<!-- PROJECTS -->
+<!-- ════ PROJECTS ════ -->
 <section class="sec" id="projects" style="padding-top:1.5rem">
   <div class="sec-tag">PROJECTS</div>
   <div class="sec-title">AI Products &amp; Experiments</div>
   <div class="sec-sub">// click to open details</div>
   <div class="sec-badges">
-    <span class="sec-badge sb-agentic"><span class="badge-dot"></span>Agentic AI</span>
     <span class="sec-badge sb-voice"><span class="badge-dot"></span>Voice AI</span>
     <span class="sec-badge sb-cv"><span class="badge-dot"></span>Computer Vision</span>
     <span class="sec-badge sb-genai"><span class="badge-dot"></span>GenAI</span>
     <span class="sec-badge sb-prod"><span class="badge-dot"></span>Production ML</span>
   </div>
   <div class="proj-grid">
-
-    <!-- ── AGENTIC SDLC ── -->
-    <div class="pc" onclick="openModal('sdlc')">
-      <div class="pc-head">
-        <div class="pc-icon-row">
-          <div class="pc-icon" style="background:rgba(244,114,182,.15);border:1px solid rgba(244,114,182,.3)">🤖</div>
-          <span class="pc-tag">LangGraph · Multi-Agent · FastAPI</span>
-        </div>
-        <div class="pc-title">Agentic SDLC Platform</div>
-        <div class="pc-desc">Autonomous software development platform — describe a project in plain English, get a fully tested, GitHub-pushed, deployment-ready codebase with zero human intervention.</div>
-      </div>
-      <div class="tags-row"><span class="tag">LangGraph</span><span class="tag">FastAPI</span><span class="tag">OpenRouter</span><span class="tag">pytest</span><span class="tag">Docker</span><span class="tag">Railway</span><span class="tag">GitHub API</span></div>
-      <div class="pc-foot">
-        <button class="pbt primary">▶ Details</button>
-        <button class="pbt" onclick="event.stopPropagation();window.open('https://github.com/sakshiselmokar')" data-tip="Opens GitHub">↗ GitHub</button>
-        <button class="pbt" onclick="event.stopPropagation();window.open('https://your-project.up.railway.app')" data-tip="Live on Railway">🚀 Live</button>
-      </div>
-    </div>
 
     <!-- StudyGenie -->
     <div class="pc" onclick="openModal('studygenie')">
@@ -566,7 +577,7 @@ footer a{color:var(--t3);transition:color .15s}footer a:hover{color:var(--blue)}
       <div class="tags-row"><span class="tag">MediaPipe</span><span class="tag">OpenCV</span><span class="tag">Python</span><span class="tag">EMNIST</span><span class="tag">LangChain</span><span class="tag">NumPy</span></div>
       <div class="pc-foot">
         <button class="pbt primary">▶ Details</button>
-        <button class="pbt" style="color:var(--t3);cursor:default" data-tip="Repo coming soon">⌛ Soon</button>
+        <button class="pbt" style="color:var(--t3)" data-tip="Repo coming soon">⌛ GitHub</button>
       </div>
     </div>
 
@@ -607,7 +618,7 @@ footer a{color:var(--t3);transition:color .15s}footer a:hover{color:var(--blue)}
   </div>
 </section>
 
-<!-- ACHIEVEMENTS -->
+<!-- ════ ACHIEVEMENTS ════ -->
 <section class="sec" style="padding-top:1.5rem">
   <div class="sec-tag">ACHIEVEMENTS</div>
   <div class="sec-title">Recognition</div>
@@ -619,21 +630,21 @@ footer a{color:var(--t3);transition:color .15s}footer a:hover{color:var(--blue)}
   </div>
 </section>
 
-<!-- SKILLS -->
+<!-- ════ SKILLS ════ -->
 <section class="sec" style="padding-top:1.5rem">
   <div class="sec-tag">SKILLS</div>
   <div class="sec-title">Technical Stack</div>
   <div class="skills-grid">
     <div class="skill-cat"><div class="skill-cat-title">Languages</div><div class="pills"><span class="pill">Python</span><span class="pill">JavaScript</span><span class="pill">SQL</span></div></div>
     <div class="skill-cat"><div class="skill-cat-title">ML Frameworks</div><div class="pills"><span class="pill">PyTorch</span><span class="pill">TensorFlow</span><span class="pill">Scikit-learn</span><span class="pill">OpenCV</span></div></div>
-    <div class="skill-cat"><div class="skill-cat-title">GenAI &amp; Agentic AI</div><div class="pills"><span class="pill">RAG</span><span class="pill">LangChain</span><span class="pill">LangGraph</span><span class="pill">Transformers</span><span class="pill">FAISS</span><span class="pill">ChromaDB</span><span class="pill">Ollama</span></div></div>
+    <div class="skill-cat"><div class="skill-cat-title">GenAI & RAG</div><div class="pills"><span class="pill">RAG</span><span class="pill">LangChain</span><span class="pill">Transformers</span><span class="pill">FAISS</span><span class="pill">ChromaDB</span><span class="pill">Vector Search</span><span class="pill">Ollama</span></div></div>
     <div class="skill-cat"><div class="skill-cat-title">Forecasting</div><div class="pills"><span class="pill">LSTM</span><span class="pill">ARIMA</span><span class="pill">Prophet</span><span class="pill">XGBoost</span></div></div>
-    <div class="skill-cat"><div class="skill-cat-title">Tools &amp; Platforms</div><div class="pills"><span class="pill">Azure ML</span><span class="pill">APIM</span><span class="pill">NVIDIA DeepStream</span><span class="pill">Git</span><span class="pill">Power BI</span><span class="pill">FastAPI</span><span class="pill">Docker</span><span class="pill">Railway</span></div></div>
+    <div class="skill-cat"><div class="skill-cat-title">Tools & Platforms</div><div class="pills"><span class="pill">Azure ML</span><span class="pill">APIM</span><span class="pill">NVIDIA DeepStream</span><span class="pill">Git</span><span class="pill">Power BI</span><span class="pill">FastAPI</span><span class="pill">Streamlit</span></div></div>
     <div class="skill-cat"><div class="skill-cat-title">Databases</div><div class="pills"><span class="pill">MySQL</span><span class="pill">Firebase</span><span class="pill">SQLite</span></div></div>
   </div>
 </section>
 
-<!-- AI CHAT -->
+<!-- ════ AI CHAT ════ -->
 <section class="sec" id="chat" style="padding-top:1.5rem">
   <div class="sec-tag">LIVE AI CHAT</div>
   <div class="sec-title">Chat with Sakshi's AI</div>
@@ -648,67 +659,43 @@ footer a{color:var(--t3);transition:color .15s}footer a:hover{color:var(--blue)}
     <div class="cw-msgs" id="cwMsgs">
       <div class="msg">
         <div class="msg-av av-ai">S</div>
-        <div class="bubble ai-b">Hi! I'm built on Sakshi's actual resume data. Ask me about her work at Sutherland, projects like the Agentic SDLC Platform or StudyGenie, her tech stack, or achievements. You can also use the 🎤 button to speak. 👋</div>
+        <div class="bubble ai-b">Hi! I'm built on Sakshi's actual resume data. Ask me about her work at Sutherland, projects like StudyGenie or AirFlow AI, her tech stack, or achievements. You can also use the 🎤 button to speak your question. 👋</div>
       </div>
     </div>
     <div class="cw-chips">
       <span class="chip" onclick="ask('What does Sakshi work on at Sutherland?')">Work at Sutherland</span>
-      <span class="chip" onclick="ask('Tell me about the Agentic SDLC Platform')">Agentic SDLC</span>
-      <span class="chip" onclick="ask('Tell me about StudyGenie')">StudyGenie</span>
+      <span class="chip" onclick="ask('Tell me about StudyGenie — how does it work?')">StudyGenie</span>
+      <span class="chip" onclick="ask('What is AirFlow AI?')">AirFlow AI</span>
       <span class="chip" onclick="ask('What are her key achievements?')">Achievements</span>
       <span class="chip" onclick="ask('What is her technical stack?')">Tech stack</span>
     </div>
     <div class="cw-inp-row">
       <textarea class="cw-inp" id="cwIn" placeholder="Ask anything... or press 🎤 to speak" onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();sendChat()}" oninput="updateCounter()"></textarea>
-      <button class="cw-mic" id="cwMic" onclick="toggleChatMic()" title="Voice input">🎤</button>
+      <button class="cw-mic" id="cwMic" onclick="toggleChatMic()" title="Voice input — speak your question">🎤</button>
       <button class="cw-send" onclick="sendChat()" data-tip="Send (Enter)">↑</button>
     </div>
     <div class="cw-counter" id="cwCounter"></div>
   </div>
 </section>
 
-<!-- AI LABS -->
+<!-- ════ AI LABS ════ -->
 <section class="sec" id="ailabs">
   <div class="sec-tag">INTERACTIVE AI LABS</div>
   <div class="sec-title">Explore AI Experiments</div>
   <div class="sec-sub" style="margin-bottom:1.25rem">// working simulations — no backend required</div>
+
   <div class="labs-header-bar">
-    <span class="labs-status">4 labs running</span>
+    <span class="labs-status">3 labs running</span>
     <span style="color:var(--bd2)">|</span>
     <span style="color:var(--t3)">env: browser-only</span>
     <span style="color:var(--bd2)">|</span>
     <span style="color:var(--t3)">backend: not required</span>
     <span class="labs-env">sakshi@ai-portfolio ~ labs/</span>
   </div>
+
   <div class="lab-grid">
 
-    <!-- AGENTIC SDLC LAB -->
-    <div class="lab-card lc-sd" onclick="openLab('sd')">
-      <div class="lab-card-glow"></div>
-      <div class="lab-titlebar">
-        <div class="lab-wdot" style="background:#ef4444"></div>
-        <div class="lab-wdot" style="background:#f59e0b"></div>
-        <div class="lab-wdot" style="background:#10b981"></div>
-        <span class="lab-filename">agentic_sdlc_lab.py</span>
-      </div>
-      <div class="lab-console">
-        <div class="lab-prompt"><span class="lab-prompt-sym">▸</span> labs/agentic-sdlc</div>
-        <div class="lab-name">Agentic SDLC Lab</div>
-        <div class="lab-type">🤖 LangGraph · 8 Agents · Self-Healing</div>
-        <div class="lab-desc">Watch 8 specialized AI agents collaborate to turn a plain-English description into tested, deployed code — with a self-healing Dev↔QA retry loop.</div>
-        <div class="lab-preview">
-          <div class="lab-preview-line"><span class="ok">[OK]</span> BA Agent → user stories parsed</div>
-          <div class="lab-preview-line"><span class="info">[>>]</span> Dev Agent → writing code...</div>
-          <div class="lab-preview-line"><span class="warn">[!!]</span> QA Agent → 2 tests failed, retrying</div>
-        </div>
-      </div>
-      <div class="lab-foot">
-        <div class="lab-tag-row"><span class="tag">LangGraph</span><span class="tag">pytest</span><span class="tag">Railway</span></div>
-        <button class="lab-open">run lab ↗</button>
-      </div>
-    </div>
-
-    <!-- STUDYGENIE LAB -->
+    <!-- STUDYGENIE -->
     <div class="lab-card lc-sg" onclick="openLab('sg')">
       <div class="lab-card-glow"></div>
       <div class="lab-titlebar">
@@ -734,7 +721,7 @@ footer a{color:var(--t3);transition:color .15s}footer a:hover{color:var(--blue)}
       </div>
     </div>
 
-    <!-- AIRFLOW LAB -->
+    <!-- AIRFLOW AI -->
     <div class="lab-card lc-af" onclick="openLab('af')">
       <div class="lab-card-glow"></div>
       <div class="lab-titlebar">
@@ -760,7 +747,7 @@ footer a{color:var(--t3);transition:color .15s}footer a:hover{color:var(--blue)}
       </div>
     </div>
 
-    <!-- DERMAI LAB -->
+    <!-- DERMAI -->
     <div class="lab-card lc-dm" onclick="openLab('dm')">
       <div class="lab-card-glow"></div>
       <div class="lab-titlebar">
@@ -789,126 +776,7 @@ footer a{color:var(--t3);transition:color .15s}footer a:hover{color:var(--blue)}
   </div>
 </section>
 
-<!-- ════ AGENTIC SDLC LAB MODAL ════ -->
-<div class="overlay" id="lab-sd">
-  <div class="modal" style="max-width:900px">
-    <div class="mh">
-      <div style="display:flex;align-items:center;gap:.75rem">
-        <span style="font-size:20px">🤖</span>
-        <div><div style="font-size:1rem;font-weight:600;color:var(--t0)">Agentic SDLC Platform Lab</div><div style="font-size:11px;color:var(--t3);font-family:var(--mono)">plain English → tested, deployed codebase</div></div>
-      </div>
-      <button class="mcl" onclick="closeLab('sd')">✕ Close</button>
-    </div>
-    <div class="lab-tabs">
-      <div class="lab-tab on" onclick="labTab('sd','overview',this)">Overview</div>
-      <div class="lab-tab" onclick="labTab('sd','pipeline',this)">Agent Pipeline</div>
-      <div class="lab-tab" onclick="labTab('sd','demo',this)">Live Demo</div>
-      <div class="lab-tab" onclick="labTab('sd','github',this)">GitHub</div>
-    </div>
-
-    <div class="lab-panel on" id="sd-overview">
-      <div class="m2">
-        <div>
-          <div class="mlbl">What it does</div>
-          <div class="bul">You describe a project. <span class="hl">8 specialized agents</span> run the full SDLC automatically</div>
-          <div class="bul"><span class="hl">Clarifier</span> scores ambiguity, asks targeted questions if needed</div>
-          <div class="bul"><span class="hl">BA → Scrum → Dev → QA</span> — writes code, runs pytest, self-heals on failure (up to 3 retries)</div>
-          <div class="bul"><span class="hl">Git Agent</span> commits each sprint with tags; <span class="hl">GitHub Agent</span> pushes and opens a PR</div>
-          <div class="bul"><span class="hl">DevOps Agent</span> generates Dockerfile, docker-compose, and CI/CD pipeline</div>
-          <div class="bul">Frontend is a single HTML file — no build step. Deployed on <span class="hl">Railway</span></div>
-        </div>
-        <div>
-          <div class="mlbl">Self-Healing Dev↔QA Loop</div>
-          <div style="background:var(--bg2);border:1px solid var(--bd);border-radius:8px;padding:.85rem;font-family:var(--mono);font-size:11px;color:var(--green);line-height:2.1">
-            <div style="color:var(--blue)">Developer writes code</div>
-            <div style="color:var(--t3);margin-left:.75rem">↓</div>
-            <div style="color:var(--blue)">QA runs pytest</div>
-            <div style="color:var(--t3);margin-left:.75rem">↓ tests pass? → next ticket ✓</div>
-            <div style="color:var(--t3);margin-left:.75rem">↓ tests fail? → error injected into</div>
-            <div style="color:var(--t3);margin-left:1.5rem">Developer prompt → full rewrite</div>
-            <div style="color:var(--t3);margin-left:.75rem">↓ up to 3 attempts</div>
-            <div style="color:var(--amber)">still failing? → skip, continue</div>
-          </div>
-          <div style="margin-top:.85rem">
-            <div class="mlbl">Stack</div>
-            <div style="display:flex;flex-wrap:wrap;gap:.35rem">
-              <span class="tag">LangGraph</span><span class="tag">FastAPI</span><span class="tag">OpenRouter</span><span class="tag">SSE streaming</span><span class="tag">pytest</span><span class="tag">Docker</span><span class="tag">Railway</span><span class="tag">GitHub API</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="lab-panel" id="sd-pipeline">
-      <div style="max-width:400px;margin:0 auto">
-        <div class="pipeline-wrap" id="sdPipeline">
-          <div class="pipe-node" id="sdp0">📝 Clarifier Agent</div>
-          <div class="pipe-arrow"></div><div class="pipe-arrow-head"></div>
-          <div class="pipe-node" id="sdp1">📋 Business Analyst Agent</div>
-          <div class="pipe-arrow"></div><div class="pipe-arrow-head"></div>
-          <div class="pipe-node" id="sdp2">🗂 Scrum Master Agent</div>
-          <div class="pipe-arrow"></div><div class="pipe-arrow-head"></div>
-          <div class="pipe-node" id="sdp3">💻 Developer Agent</div>
-          <div class="pipe-arrow"></div><div class="pipe-arrow-head"></div>
-          <div class="pipe-node" id="sdp4">🧪 QA Agent (pytest + self-heal)</div>
-          <div class="pipe-arrow"></div><div class="pipe-arrow-head"></div>
-          <div class="pipe-node" id="sdp5">🔀 Git Agent → GitHub Agent</div>
-          <div class="pipe-arrow"></div><div class="pipe-arrow-head"></div>
-          <div class="pipe-node" id="sdp6">🐳 DevOps Agent (Docker + CI/CD)</div>
-        </div>
-        <div style="text-align:center;margin-top:1rem">
-          <button class="btn" style="font-size:12px" onclick="animatePipeline('sd',7)">▶ Animate Pipeline</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="lab-panel" id="sd-demo">
-      <div id="sdDemoInput">
-        <div style="font-size:13px;color:var(--t2);margin-bottom:.85rem">Type a project description — watch the agents run:</div>
-        <div style="display:flex;gap:.5rem;margin-bottom:.85rem">
-          <input id="sdPrompt" style="flex:1;background:var(--bg2);border:1px solid var(--bd);border-radius:8px;padding:9px 12px;color:var(--t0);font-size:13px;outline:none;" placeholder="e.g. Build a REST API for a todo app with FastAPI and pytest" />
-          <button class="btn btn-p" style="font-size:12px;white-space:nowrap" onclick="runSdDemo()">▶ Run</button>
-        </div>
-        <div style="display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1rem">
-          <span class="chip" onclick="document.getElementById('sdPrompt').value=this.textContent">REST API for a todo app</span>
-          <span class="chip" onclick="document.getElementById('sdPrompt').value=this.textContent">Web scraper with data export</span>
-          <span class="chip" onclick="document.getElementById('sdPrompt').value=this.textContent">CLI tool for file renaming</span>
-        </div>
-      </div>
-      <div id="sdAgentLog" style="display:none">
-        <div style="background:var(--bg0);border:1px solid var(--bd2);border-radius:10px;padding:1rem;font-family:var(--mono);font-size:11px;min-height:220px;max-height:320px;overflow-y:auto" id="sdLogBody"></div>
-        <button class="btn" style="font-size:12px;margin-top:.75rem" onclick="resetSdDemo()">↺ Try Another</button>
-      </div>
-    </div>
-
-    <div class="lab-panel" id="sd-github">
-      <div style="display:flex;flex-direction:column;gap:1rem">
-        <div class="ai-card">
-          <div class="mlbl">Repository</div>
-          <div style="font-family:var(--mono);font-size:13px;color:var(--green);margin-bottom:.75rem">github.com/sakshiselmokar — agentic-sdlc-platform</div>
-          <a href="https://github.com/sakshiselmokar" target="_blank" class="btn btn-p" style="font-size:12px">↗ Open on GitHub</a>
-          <a href="https://your-project.up.railway.app" target="_blank" class="btn" style="font-size:12px;margin-left:.5rem">🚀 Live on Railway</a>
-        </div>
-        <div class="ai-card">
-          <div class="mlbl">Run Locally</div>
-          <div style="background:var(--bg0);border-radius:8px;padding:.85rem;font-family:var(--mono);font-size:11px;color:var(--green);line-height:2">
-            <div style="color:var(--t3)"># clone and set up</div>
-            <div>git clone https://github.com/sakshiselmokar/agentic-sdlc</div>
-            <div>cd agentic_platform_v5 && pip install -r requirements.txt</div>
-            <div style="color:var(--t3);margin-top:.5rem"># add .env file with your keys</div>
-            <div>OPENROUTER_API_KEY=sk-or-v1-...</div>
-            <div>GITHUB_TOKEN=ghp_...</div>
-            <div>GITHUB_REPO=your-username/your-repo</div>
-            <div style="color:var(--t3);margin-top:.5rem"># run</div>
-            <div>uvicorn api.main:app --reload --port 8000</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- STUDYGENIE LAB MODAL -->
+<!-- ════ STUDYGENIE LAB MODAL ════ -->
 <div class="overlay" id="lab-sg">
   <div class="modal" style="max-width:900px">
     <div class="mh">
@@ -925,6 +793,8 @@ footer a{color:var(--t3);transition:color .15s}footer a:hover{color:var(--blue)}
       <div class="lab-tab" onclick="labTab('sg','voice',this)">Voice Demo</div>
       <div class="lab-tab" onclick="labTab('sg','github',this)">GitHub</div>
     </div>
+
+    <!-- OVERVIEW -->
     <div class="lab-panel on" id="sg-overview">
       <div class="m2">
         <div>
@@ -934,22 +804,28 @@ footer a{color:var(--t3);transition:color .15s}footer a:hover{color:var(--blue)}
           <div class="bul">Generates <span class="hl">AI summaries</span> and <span class="hl">multiple-choice quizzes</span> from your materials</div>
           <div class="bul"><span class="hl">Ollama (phi model)</span> — runs fully locally, zero cloud dependency</div>
           <div class="bul"><span class="hl">Whisper STT</span> → LLM → <span class="hl">Piper TTS</span> — full audio pipeline</div>
+          <div class="bul">Gamification planned: XP, badges, streaks, spaced repetition</div>
         </div>
         <div>
           <div class="mlbl">3-Service Architecture</div>
           <div style="background:var(--bg2);border:1px solid var(--bd);border-radius:8px;padding:.85rem;font-family:var(--mono);font-size:11px;color:var(--green);line-height:2">
             <div style="color:var(--blue)">study-genie-voice</div>
-            <div style="color:var(--t3);margin-left:.75rem">React 18 + TypeScript · Vite · shadcn/ui · port 5173</div>
+            <div style="color:var(--t3);margin-left:.75rem">React 18 + TypeScript · Vite · shadcn/ui</div>
+            <div style="color:var(--t3);margin-left:.75rem">port 5173</div>
             <div style="color:var(--t3);margin:.2rem 0">──────────────</div>
             <div style="color:var(--blue)">voice-assistant-backend</div>
             <div style="color:var(--t3);margin-left:.75rem">FastAPI · port 8000</div>
+            <div style="color:var(--t3);margin-left:.75rem">POST /ask · GET /response_audio</div>
             <div style="color:var(--t3);margin:.2rem 0">──────────────</div>
             <div style="color:var(--blue)">sum (summarizer + quiz)</div>
             <div style="color:var(--t3);margin-left:.75rem">FastAPI · port 8001</div>
+            <div style="color:var(--t3);margin-left:.75rem">POST /summarize · POST /upload</div>
           </div>
         </div>
       </div>
     </div>
+
+    <!-- ARCHITECTURE -->
     <div class="lab-panel" id="sg-arch">
       <div style="max-width:360px;margin:0 auto">
         <div class="pipeline-wrap" id="sgPipeline">
@@ -968,6 +844,8 @@ footer a{color:var(--t3);transition:color .15s}footer a:hover{color:var(--blue)}
         </div>
       </div>
     </div>
+
+    <!-- LIVE DEMO -->
     <div class="lab-panel" id="sg-demo">
       <div id="sgUpload">
         <div class="upload-zone" onclick="runSgDemo()" id="sgZone">
@@ -987,39 +865,60 @@ footer a{color:var(--t3);transition:color .15s}footer a:hover{color:var(--blue)}
       <div id="sgResults" style="display:none">
         <div class="ai-card">
           <div class="ai-card-label" style="color:var(--blue)">📄 AI Summary</div>
-          <div style="font-size:13px;color:var(--t1);line-height:1.7">Neural networks are machine learning models loosely inspired by the human brain. They consist of layers of interconnected nodes that transform input data through weighted connections. <strong>Overfitting</strong> occurs when a model learns training data too precisely — memorising noise rather than learning generalisable patterns — leading to poor performance on new, unseen data.</div>
+          <div style="font-size:13px;color:var(--t1);line-height:1.7">Neural networks are machine learning models loosely inspired by the human brain. They consist of layers of interconnected nodes (neurons) that transform input data through weighted connections. <strong>Overfitting</strong> occurs when a model learns training data too precisely — memorising noise rather than learning generalisable patterns — leading to poor performance on new, unseen data. Regularisation techniques like dropout and L2 penalty help prevent it.</div>
         </div>
         <div class="ai-card">
           <div class="ai-card-label" style="color:var(--purple)">🧩 Generated Quiz</div>
           <div style="font-size:13px;color:var(--t1);font-weight:500;margin-bottom:.75rem">Q: What is overfitting in machine learning?</div>
-          <div class="quiz-opt" onclick="selectOpt(this,false)"><span class="opt-letter">A</span>When a model performs equally on train and test sets</div>
-          <div class="quiz-opt" onclick="selectOpt(this,false)"><span class="opt-letter">B</span>When a model cannot converge during training</div>
-          <div class="quiz-opt" onclick="selectOpt(this,true)"><span class="opt-letter">C</span>When a model learns training data too precisely and fails on new data</div>
-          <div class="quiz-opt" onclick="selectOpt(this,false)"><span class="opt-letter">D</span>When training loss increases while validation loss decreases</div>
+          <div class="quiz-opt" onclick="selectOpt(this,false)" data-opt="A"><span class="opt-letter">A</span>When a model performs equally on train and test sets</div>
+          <div class="quiz-opt" onclick="selectOpt(this,false)" data-opt="B"><span class="opt-letter">B</span>When a model cannot converge during training</div>
+          <div class="quiz-opt" onclick="selectOpt(this,true)" data-opt="C"><span class="opt-letter">C</span>When a model learns training data too precisely and fails on new data</div>
+          <div class="quiz-opt" onclick="selectOpt(this,false)" data-opt="D"><span class="opt-letter">D</span>When training loss increases while validation loss decreases</div>
         </div>
         <button class="btn" style="font-size:12px" onclick="resetSgDemo()">↺ Try Another</button>
       </div>
     </div>
+
+    <!-- VOICE DEMO -->
     <div class="lab-panel" id="sg-voice">
       <div class="mic-wrap">
-        <div style="font-size:13px;color:var(--t2);text-align:center;max-width:380px">Click the microphone and speak — or watch the simulation. Uses Web Speech API if available.</div>
-        <div class="mic-btn" id="micBtn" onclick="toggleMic()"><div class="mic-rings"></div>🎤</div>
+        <div style="font-size:13px;color:var(--t2);text-align:center;max-width:380px">Click the microphone and speak — or watch the simulation run automatically. Uses Web Speech API if available.</div>
+        <div class="mic-btn" id="micBtn" onclick="toggleMic()">
+          <div class="mic-rings"></div>
+          🎤
+        </div>
         <div class="mic-status" id="micStatus">Click to start listening</div>
         <div class="voice-bubble" id="voiceQuestion"></div>
         <div class="voice-bubble" id="voiceAnswer" style="background:var(--dim);border-color:rgba(59,130,246,.3);color:var(--t1)"></div>
       </div>
     </div>
+
+    <!-- GITHUB -->
     <div class="lab-panel" id="sg-github">
-      <div class="ai-card">
-        <div class="mlbl">Repository</div>
-        <div style="font-family:var(--mono);font-size:13px;color:var(--green);margin-bottom:.75rem">github.com/sakshiselmokar/StudyGenie-AI-Learning-Companion</div>
-        <a href="https://github.com/sakshiselmokar/StudyGenie-AI-Learning-Companion" target="_blank" class="btn btn-p" style="font-size:12px">↗ Open on GitHub</a>
+      <div style="display:flex;flex-direction:column;gap:1rem">
+        <div class="ai-card">
+          <div class="mlbl">Repository</div>
+          <div style="font-family:var(--mono);font-size:13px;color:var(--green);margin-bottom:.75rem">github.com/sakshiselmokar/StudyGenie-AI-Learning-Companion</div>
+          <a href="https://github.com/sakshiselmokar/StudyGenie-AI-Learning-Companion" target="_blank" class="btn btn-p" style="font-size:12px">↗ Open on GitHub</a>
+        </div>
+        <div class="ai-card">
+          <div class="mlbl">Run Locally</div>
+          <div style="background:var(--bg0);border-radius:8px;padding:.85rem;font-family:var(--mono);font-size:11px;color:var(--green);line-height:2">
+            <div style="color:var(--t3)"># Terminal 1 — voice backend</div>
+            <div>cd voice-assistant-backend</div>
+            <div>uvicorn main:app --port 8000</div>
+            <div style="color:var(--t3);margin-top:.5rem"># Terminal 2 — sum backend</div>
+            <div>cd sum && uvicorn backend:app --port 8001</div>
+            <div style="color:var(--t3);margin-top:.5rem"># Terminal 3 — frontend</div>
+            <div>cd study-genie-voice && npm run dev</div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- AIRFLOW LAB MODAL -->
+<!-- ════ AIRFLOW LAB MODAL ════ -->
 <div class="overlay" id="lab-af">
   <div class="modal" style="max-width:900px">
     <div class="mh">
@@ -1035,33 +934,72 @@ footer a{color:var(--t3);transition:color .15s}footer a:hover{color:var(--blue)}
       <div class="lab-tab" onclick="labTab('af','pipeline',this)">Pipeline</div>
       <div class="lab-tab" onclick="labTab('af','code',this)">Generated Code</div>
     </div>
+
+    <!-- OVERVIEW -->
     <div class="lab-panel on" id="af-overview">
       <div class="m2">
         <div>
           <div class="mlbl">What is AirFlow AI?</div>
-          <div class="bul">Use your <span class="hl">index finger</span> to draw shapes in mid-air via webcam</div>
-          <div class="bul"><span class="hl">Two-finger gesture</span> switches to text mode — EMNIST stroke recognition</div>
-          <div class="bul">Press <kbd style="background:var(--bg3);border:1px solid var(--bd2);border-radius:3px;padding:1px 5px;font-family:var(--mono);font-size:11px">e</kbd> → pipeline runs: shape detection → graph → code → explanation</div>
-          <div class="bul">All local — <span class="hl">MediaPipe + OpenCV</span>, no cloud required</div>
+          <div class="bul">Use your <span class="hl">index finger</span> to draw shapes in mid-air — rectangles, circles, diamonds — via webcam</div>
+          <div class="bul"><span class="hl">Two-finger gesture</span> switches to text mode — write letters using EMNIST stroke recognition</div>
+          <div class="bul">Press <kbd style="background:var(--bg3);border:1px solid var(--bd2);border-radius:3px;padding:1px 5px;font-family:var(--mono);font-size:11px">e</kbd> to trigger the intelligence pipeline</div>
+          <div class="bul">Outputs: <span class="hl">validated graph</span>, <span class="hl">flow tree</span>, <span class="hl">generated Python code</span>, and a <span class="hl">step-by-step explanation</span></div>
+          <div class="bul">All runs locally — <span class="hl">MediaPipe + OpenCV</span>, no cloud required</div>
         </div>
         <div>
           <div class="mlbl">Source Structure</div>
           <div style="background:var(--bg2);border:1px solid var(--bd);border-radius:8px;padding:.85rem;font-family:var(--mono);font-size:11px;color:var(--green);line-height:2">
-            src/<br>├── <span style="color:var(--blue)">vision/</span> &nbsp;hand_tracking, shape_detector<br>├── <span style="color:var(--blue)">intelligence/</span> &nbsp;pipeline, code_generator<br>└── <span style="color:var(--blue)">main.py</span>
+            src/<br>
+            ├── <span style="color:var(--blue)">vision/</span><br>
+            <span style="color:var(--t3)">│   hand_tracking.py</span><br>
+            <span style="color:var(--t3)">│   shape_detector.py</span><br>
+            <span style="color:var(--t3)">│   gesture_detector.py</span><br>
+            ├── <span style="color:var(--blue)">intelligence/</span><br>
+            <span style="color:var(--t3)">│   pipeline.py</span><br>
+            <span style="color:var(--t3)">│   flow_builder.py</span><br>
+            <span style="color:var(--t3)">│   code_generator.py</span><br>
+            <span style="color:var(--t3)">│   explainer.py</span><br>
+            └── <span style="color:var(--blue)">main.py</span>
           </div>
         </div>
       </div>
     </div>
+
+    <!-- DEMO -->
     <div class="lab-panel" id="af-demo">
-      <div style="background:var(--bg0);border:1px solid var(--bd2);border-radius:12px;aspect-ratio:16/9;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;position:relative;overflow:hidden">
+      <!-- ─── VIDEO PLACEHOLDER ─────────────────────────────────────
+           TO SWAP IN YOUR VIDEO:
+           1. Download your LinkedIn demo video
+           2. Put it next to index.html  e.g.  airflow-demo.mp4
+           3. Delete everything between the two PLACEHOLDER comment lines
+           4. Paste this instead:
+              <video src="airflow-demo.mp4" controls
+                     style="width:100%;border-radius:12px;border:1px solid var(--bd2)">
+              </video>
+           OR for a YouTube/LinkedIn embed:
+              <iframe src="YOUR_EMBED_URL" allowfullscreen
+                      style="width:100%;aspect-ratio:16/9;border-radius:12px;border:0">
+              </iframe>
+      ──────────────────────────────────────────────────────────── -->
+      <div class="video-ph">
         <div style="position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(16,185,129,.5),transparent)"></div>
-        <div style="font-size:11px;font-family:var(--mono);position:absolute;top:14px;left:14px;background:rgba(0,0,0,.6);border:1px solid var(--bd2);border-radius:4px;padding:3px 9px;color:var(--t3)">✋ AirFlow AI · v1.0</div>
-        <div style="width:64px;height:64px;border-radius:50%;border:2px solid rgba(16,185,129,.4);background:rgba(16,185,129,.08);display:flex;align-items:center;justify-content:center;font-size:24px">▶</div>
-        <div style="font-size:.95rem;font-weight:500;color:var(--t0)">Demo Video</div>
-        <div style="font-size:11px;color:var(--t3);font-family:var(--mono)">Hand Gesture → Flowchart → Code</div>
-        <div style="font-size:10px;font-family:var(--mono);position:absolute;bottom:14px;right:14px;background:rgba(0,0,0,.6);border:1px dashed var(--bd2);border-radius:4px;padding:3px 9px;color:var(--t3)">Add video: replace this div with &lt;video src="airflow-demo.mp4"&gt;</div>
+        <div class="video-ph-badge">✋ AirFlow AI · v1.0</div>
+        <div class="video-ph-icon">▶</div>
+        <div class="video-ph-title">Demo Video</div>
+        <div class="video-ph-sub">Hand Gesture → Flowchart → Code</div>
+        <div class="video-ph-swap">📹 swap with your video</div>
+      </div>
+      <!-- ─── END PLACEHOLDER ───────────────────────────────────── -->
+      <div class="video-swap-hint">
+        <div class="swap-label">// how to add your video</div>
+        <div style="color:var(--t2)">Step 1 — copy your demo video → <span style="color:var(--green)">airflow-demo.mp4</span> next to index.html</div>
+        <div style="color:var(--t2)">Step 2 — replace the video-ph div above with:</div>
+        <div style="color:var(--green);margin-left:.5rem">&lt;video src="airflow-demo.mp4" controls style="width:100%;border-radius:12px"&gt;&lt;/video&gt;</div>
+        <div style="color:var(--t3);margin-top:.25rem">or paste a LinkedIn/YouTube iframe embed URL</div>
       </div>
     </div>
+
+    <!-- PIPELINE -->
     <div class="lab-panel" id="af-pipeline">
       <div style="max-width:380px;margin:0 auto">
         <div class="pipeline-wrap" id="afPipeline">
@@ -1071,19 +1009,26 @@ footer a{color:var(--t3);transition:color .15s}footer a:hover{color:var(--blue)}
           <div class="pipe-arrow"></div><div class="pipe-arrow-head"></div>
           <div class="pipe-node" id="afp2">🔤 EMNIST Text Recognition</div>
           <div class="pipe-arrow"></div><div class="pipe-arrow-head"></div>
-          <div class="pipe-node" id="afp3">📊 Graph Builder</div>
+          <div class="pipe-node" id="afp3">🗺 Spatial Mapper</div>
           <div class="pipe-arrow"></div><div class="pipe-arrow-head"></div>
-          <div class="pipe-node" id="afp4">💻 Code Generation</div>
+          <div class="pipe-node" id="afp4">📊 Graph Builder</div>
+          <div class="pipe-arrow"></div><div class="pipe-arrow-head"></div>
+          <div class="pipe-node" id="afp5">💻 Code Generation</div>
         </div>
         <div style="text-align:center;margin-top:1rem">
-          <button class="btn" style="font-size:12px" onclick="animatePipeline('af',5)">▶ Animate Pipeline</button>
+          <button class="btn" style="font-size:12px" onclick="animatePipeline('af',6)">▶ Animate Pipeline</button>
         </div>
       </div>
     </div>
+
+    <!-- GENERATED CODE -->
     <div class="lab-panel" id="af-code">
+      <div style="font-size:12px;color:var(--t2);margin-bottom:.85rem">This is an example of code generated by AirFlow AI from a drawn flowchart. The <span style="color:var(--blue)">code_generator.py</span> module produces this output from your gesture input.</div>
       <div class="code-terminal">
         <div class="code-bar">
-          <div class="dot" style="background:#ef4444"></div><div class="dot" style="background:#f59e0b"></div><div class="dot" style="background:#10b981"></div>
+          <div class="dot" style="background:#ef4444"></div>
+          <div class="dot" style="background:#f59e0b"></div>
+          <div class="dot" style="background:#10b981"></div>
           <span style="font-size:10px;color:var(--t3);margin-left:.5rem">generated_flow.py</span>
           <button class="pbt" style="margin-left:auto;font-size:10px" onclick="replayCode()">↺ Replay</button>
         </div>
@@ -1093,7 +1038,7 @@ footer a{color:var(--t3);transition:color .15s}footer a:hover{color:var(--blue)}
   </div>
 </div>
 
-<!-- DERMAI LAB MODAL -->
+<!-- ════ DERMAI LAB MODAL ════ -->
 <div class="overlay" id="lab-dm">
   <div class="modal" style="max-width:800px">
     <div class="mh">
@@ -1108,6 +1053,8 @@ footer a{color:var(--t3);transition:color .15s}footer a:hover{color:var(--blue)}
       <div class="lab-tab" onclick="labTab('dm','demo',this)">Watch Demo</div>
       <div class="lab-tab" onclick="labTab('dm','arch',this)">Architecture</div>
     </div>
+
+    <!-- UPLOAD -->
     <div class="lab-panel on" id="dm-upload">
       <div id="dmDropWrap">
         <div class="drop-zone" id="dmDrop" onclick="runDermDemo()">
@@ -1126,7 +1073,7 @@ footer a{color:var(--t3);transition:color .15s}footer a:hover{color:var(--blue)}
       <div id="dmResults" style="display:none">
         <div class="ai-card" style="margin-bottom:1rem">
           <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:.75rem">
-            <div class="ai-card-label">🔬 Inference Result</div>
+            <div class="ai-card-label" style="color:var(--red)">🔬 Inference Result</div>
             <span style="font-family:var(--mono);font-size:10px;color:var(--t3)">ResNet-50 · ~180ms</span>
           </div>
           <div style="font-size:1.1rem;font-weight:600;color:var(--t0);margin-bottom:.25rem">Prediction: <span style="color:var(--amber)">Acne</span></div>
@@ -1134,37 +1081,62 @@ footer a{color:var(--t3);transition:color .15s}footer a:hover{color:var(--blue)}
         </div>
         <div class="ai-card">
           <div class="ai-card-label" style="color:var(--blue)">Confidence Distribution</div>
-          <div class="conf-bar-row"><span class="conf-lbl">Acne</span><div class="conf-track"><div class="conf-fill" style="background:linear-gradient(90deg,#f59e0b,#ef4444)" id="dc0"></div></div><span class="conf-pct" id="dp0">—</span></div>
-          <div class="conf-bar-row"><span class="conf-lbl">Eczema</span><div class="conf-track"><div class="conf-fill" style="background:linear-gradient(90deg,#3b82f6,#8b5cf6)" id="dc1"></div></div><span class="conf-pct" id="dp1">—</span></div>
-          <div class="conf-bar-row"><span class="conf-lbl">Psoriasis</span><div class="conf-track"><div class="conf-fill" style="background:linear-gradient(90deg,#3b82f6,#8b5cf6)" id="dc2"></div></div><span class="conf-pct" id="dp2">—</span></div>
-          <div class="conf-bar-row"><span class="conf-lbl">Rosacea</span><div class="conf-track"><div class="conf-fill" style="background:linear-gradient(90deg,#3b82f6,#8b5cf6)" id="dc3"></div></div><span class="conf-pct" id="dp3">—</span></div>
-          <div class="conf-bar-row"><span class="conf-lbl">Melanoma</span><div class="conf-track"><div class="conf-fill" style="background:linear-gradient(90deg,#3b82f6,#8b5cf6)" id="dc4"></div></div><span class="conf-pct" id="dp4">—</span></div>
+          <div id="dermConf">
+            <div class="conf-bar-row"><span class="conf-lbl">Acne</span><div class="conf-track"><div class="conf-fill" style="background:linear-gradient(90deg,#f59e0b,#ef4444)" id="dc0"></div></div><span class="conf-pct" id="dp0">—</span></div>
+            <div class="conf-bar-row"><span class="conf-lbl">Eczema</span><div class="conf-track"><div class="conf-fill" style="background:linear-gradient(90deg,#3b82f6,#8b5cf6)" id="dc1"></div></div><span class="conf-pct" id="dp1">—</span></div>
+            <div class="conf-bar-row"><span class="conf-lbl">Psoriasis</span><div class="conf-track"><div class="conf-fill" style="background:linear-gradient(90deg,#3b82f6,#8b5cf6)" id="dc2"></div></div><span class="conf-pct" id="dp2">—</span></div>
+            <div class="conf-bar-row"><span class="conf-lbl">Rosacea</span><div class="conf-track"><div class="conf-fill" style="background:linear-gradient(90deg,#3b82f6,#8b5cf6)" id="dc3"></div></div><span class="conf-pct" id="dp3">—</span></div>
+            <div class="conf-bar-row"><span class="conf-lbl">Melanoma</span><div class="conf-track"><div class="conf-fill" style="background:linear-gradient(90deg,#3b82f6,#8b5cf6)" id="dc4"></div></div><span class="conf-pct" id="dp4">—</span></div>
+          </div>
         </div>
-        <button class="btn" style="font-size:12px;margin-top:.5rem" onclick="resetDerm()">↺ Try Another</button>
+        <button class="btn" style="font-size:12px;margin-top:.5rem" onclick="resetDerm()">↺ Try Another Image</button>
       </div>
     </div>
+
+    <!-- DEMO VIDEO -->
     <div class="lab-panel" id="dm-demo">
-      <div style="background:var(--bg0);border:1px solid var(--bd2);border-radius:12px;aspect-ratio:16/9;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;position:relative;overflow:hidden">
+      <!-- ─── VIDEO PLACEHOLDER ─────────────────────────────────────
+           TO SWAP IN YOUR VIDEO:
+           1. Put your demo file next to index.html  e.g.  dermai-demo.mp4
+           2. Delete everything between the two PLACEHOLDER comment lines
+           3. Paste this instead:
+              <video src="dermai-demo.mp4" controls
+                     style="width:100%;border-radius:12px;border:1px solid var(--bd2)">
+              </video>
+           OR for YouTube/LinkedIn embed use an iframe.
+      ──────────────────────────────────────────────────────────── -->
+      <div class="video-ph">
         <div style="position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(239,68,68,.5),transparent)"></div>
-        <div style="font-size:11px;font-family:var(--mono);position:absolute;top:14px;left:14px;background:rgba(0,0,0,.6);border:1px solid var(--bd2);border-radius:4px;padding:3px 9px;color:var(--t3)">🔬 DermAI · ResNet-50</div>
-        <div style="width:64px;height:64px;border-radius:50%;border:2px solid rgba(239,68,68,.4);background:rgba(239,68,68,.08);display:flex;align-items:center;justify-content:center;font-size:24px">▶</div>
-        <div style="font-size:.95rem;font-weight:500;color:var(--t0)">Demo Video</div>
-        <div style="font-size:11px;color:var(--t3);font-family:var(--mono)">Skin Disease Diagnosis · 5-Class Classifier</div>
-        <div style="font-size:10px;font-family:var(--mono);position:absolute;bottom:14px;right:14px;background:rgba(0,0,0,.6);border:1px dashed var(--bd2);border-radius:4px;padding:3px 9px;color:var(--t3)">Add video: replace this div with &lt;video src="dermai-demo.mp4"&gt;</div>
+        <div class="video-ph-badge">🔬 DermAI · ResNet-50</div>
+        <div class="video-ph-icon" style="border-color:rgba(239,68,68,.4);background:rgba(239,68,68,.08)">▶</div>
+        <div class="video-ph-title">Demo Video</div>
+        <div class="video-ph-sub">Skin Disease Diagnosis · 5-Class Classifier</div>
+        <div class="video-ph-swap">📹 swap with your video</div>
+      </div>
+      <!-- ─── END PLACEHOLDER ───────────────────────────────────── -->
+      <div class="video-swap-hint">
+        <div class="swap-label">// how to add your video</div>
+        <div style="color:var(--t2)">Step 1 — copy your demo video → <span style="color:var(--green)">dermai-demo.mp4</span> next to index.html</div>
+        <div style="color:var(--t2)">Step 2 — replace the video-ph div above with:</div>
+        <div style="color:var(--green);margin-left:.5rem">&lt;video src="dermai-demo.mp4" controls style="width:100%;border-radius:12px"&gt;&lt;/video&gt;</div>
+        <div style="color:var(--t3);margin-top:.25rem">or paste a LinkedIn/YouTube iframe embed URL</div>
       </div>
     </div>
+
+    <!-- ARCH -->
     <div class="lab-panel" id="dm-arch">
       <div class="m2">
         <div>
           <div class="mlbl">Model Architecture</div>
-          <div class="bul">Base: <span class="hl">ResNet-50</span> pretrained on ImageNet</div>
-          <div class="bul">Fine-tuned on <span class="hl">DermNet</span> — 5 disease categories</div>
+          <div class="bul">Base model: <span class="hl">ResNet-50</span> pretrained on ImageNet</div>
+          <div class="bul">Fine-tuned on <span class="hl">DermNet</span> dataset — 5 disease categories</div>
+          <div class="bul">Final layer replaced with 5-class dense head</div>
           <div class="bul">Framework: <span class="hl">TensorFlow / Keras</span></div>
           <div class="bul">~180ms inference on CPU</div>
         </div>
         <div>
           <div class="mlbl">Inference Pipeline</div>
-          <div class="pipeline-wrap" id="dmPipeline">
+          <div class="pipeline-wrap" style="gap:0" id="dmPipeline">
             <div class="pipe-node" id="dmp0">🖼️ Image Input</div>
             <div class="pipe-arrow"></div><div class="pipe-arrow-head"></div>
             <div class="pipe-node" id="dmp1">⚙️ Preprocess (224×224)</div>
@@ -1182,24 +1154,60 @@ footer a{color:var(--t3);transition:color .15s}footer a:hover{color:var(--blue)}
   </div>
 </div>
 
-<!-- TIMELINE -->
+<!-- ════ TIMELINE ════ -->
 <section class="sec" id="timeline" style="padding-top:1.5rem">
   <div class="sec-tag">JOURNEY</div>
   <div class="sec-title">Career Timeline</div>
   <div class="tl-wrap">
     <div class="timeline">
       <div class="tl-line"></div>
-      <div class="tl-item"><div class="tl-dot"></div><div class="tl-yr">2021</div><div class="tl-t">Started B.Tech CSE · MIT Sambhajinagar</div><div class="tl-d">Computer Science with Honors in Cloud Computing. Began ML journey.</div><span class="tl-badge">academic</span></div>
-      <div class="tl-item"><div class="tl-dot" style="border-color:var(--amber)"></div><div class="tl-yr">2023</div><div class="tl-t">🏆 Smart India Hackathon — National Winner</div><div class="tl-d">Won among 16 national finalists.</div><span class="tl-badge" style="border-color:var(--amber);color:var(--amber)">national winner</span></div>
-      <div class="tl-item"><div class="tl-dot"></div><div class="tl-yr">2025 — Jan</div><div class="tl-t">AI Intern · Sutherland Global</div><div class="tl-d">DeepStream face recognition (98% acc) · RAG healthcare assistant (40% faster queries).</div><span class="tl-badge">internship</span></div>
-      <div class="tl-item"><div class="tl-dot" style="border-color:var(--amber)"></div><div class="tl-yr">2025 — Feb</div><div class="tl-t">⚡ ATMECS GenAI Hackathon — Top 12 / 4000+</div><div class="tl-d">Ranked top 12 among 4000+ participants.</div><span class="tl-badge" style="border-color:var(--amber);color:var(--amber)">top 12</span></div>
-      <div class="tl-item"><div class="tl-dot" style="border-color:var(--green)"></div><div class="tl-yr">2025 — May</div><div class="tl-t">🎓 Graduated · CSE Gold Medalist · CGPA 9.45</div><div class="tl-d">B.Tech complete. Department Gold Medal.</div><span class="tl-badge" style="border-color:var(--green);color:var(--green)">gold medalist</span></div>
-      <div class="tl-item"><div class="tl-dot" style="border-color:var(--blue);background:var(--blue)"></div><div class="tl-yr">2025 — Jun · NOW</div><div class="tl-t">🚀 Promoted → AI/ML Engineer · Sutherland Global</div><div class="tl-d">Full-time role. Azure ML forecasting, Smart Assist (Claude + RAG), APIM integrations.</div><span class="tl-badge" style="border-color:var(--blue);color:var(--blue)">current · promoted in 5 months</span></div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-yr">2021</div>
+        <div class="tl-t">Started B.Tech CSE · MIT Sambhajinagar</div>
+        <div class="tl-d">Computer Science with Honors in Cloud Computing. Began ML journey.</div>
+        <span class="tl-badge">academic</span>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot" style="border-color:var(--amber)"></div>
+        <div class="tl-yr">2023</div>
+        <div class="tl-t">🏆 Smart India Hackathon — National Winner</div>
+        <div class="tl-d">Won among 16 national finalists. Built an AI-based solution selected by SIH jury.</div>
+        <span class="tl-badge" style="border-color:var(--amber);color:var(--amber)">national winner</span>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-yr">2025 — Jan</div>
+        <div class="tl-t">AI Intern · Sutherland Global</div>
+        <div class="tl-d">DeepStream face recognition (98% acc) · RAG healthcare assistant (40% faster queries).</div>
+        <span class="tl-badge">internship</span>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot" style="border-color:var(--amber)"></div>
+        <div class="tl-yr">2025 — Feb</div>
+        <div class="tl-t">⚡ ATMECS GenAI Hackathon — Top 12 / 4000+</div>
+        <div class="tl-d">Ranked top 12 among 4000+ participants in internal GenAI hackathon at Sutherland.</div>
+        <span class="tl-badge" style="border-color:var(--amber);color:var(--amber)">top 12</span>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot" style="border-color:var(--green)"></div>
+        <div class="tl-yr">2025 — May</div>
+        <div class="tl-t">🎓 Graduated · CSE Gold Medalist · CGPA 9.45</div>
+        <div class="tl-d">B.Tech complete. Department Gold Medal. Honors in Cloud Computing.</div>
+        <span class="tl-badge" style="border-color:var(--green);color:var(--green)">gold medalist</span>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot" style="border-color:var(--blue);background:var(--blue)"></div>
+        <div class="tl-yr">2025 — Jun · NOW</div>
+        <div class="tl-t">🚀 Promoted → AI/ML Engineer · Sutherland Global</div>
+        <div class="tl-d">Full-time role. Azure ML forecasting, Smart Assist (Claude + RAG), APIM integrations, Workforce Optimization Platform.</div>
+        <span class="tl-badge" style="border-color:var(--blue);color:var(--blue)">current · promoted in 5 months</span>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- EDUCATION -->
+<!-- ════ EDUCATION ════ -->
 <section class="sec" style="padding-top:1.5rem">
   <div class="sec-tag">EDUCATION</div>
   <div class="sec-title">Background</div>
@@ -1209,7 +1217,10 @@ footer a{color:var(--t3);transition:color .15s}footer a:hover{color:var(--blue)}
       <div class="ec-co">Maharashtra Institute of Technology</div>
       <div class="ec-role">B.Tech Computer Science</div>
       <div style="font-size:12px;color:var(--t2);margin-top:.4rem">Honors in Cloud Computing · 2021–2025 · Sambhajinagar</div>
-      <div style="display:flex;gap:.5rem;margin-top:.75rem;flex-wrap:wrap"><span class="pill" style="border-color:var(--amber);color:var(--amber)">CGPA 9.45</span><span class="pill" style="border-color:var(--amber);color:var(--amber)">🥇 Gold Medalist</span></div>
+      <div style="display:flex;gap:.5rem;margin-top:.75rem;flex-wrap:wrap">
+        <span class="pill" style="border-color:var(--amber);color:var(--amber)">CGPA 9.45</span>
+        <span class="pill" style="border-color:var(--amber);color:var(--amber)">🥇 Gold Medalist</span>
+      </div>
     </div>
     <div class="ec">
       <div style="font-size:10px;font-family:var(--mono);color:var(--blue);margin-bottom:.5rem;text-transform:uppercase;letter-spacing:.4px">CERTIFICATION</div>
@@ -1219,132 +1230,282 @@ footer a{color:var(--t3);transition:color .15s}footer a:hover{color:var(--blue)}
       <div style="margin-top:.75rem"><span class="pill" style="border-color:var(--green);color:var(--green)">✓ Certified</span></div>
     </div>
   </div>
+  <!-- GitHub heatmap placeholder -->
   <div style="margin-top:1.5rem">
     <div style="font-size:10px;font-family:var(--mono);color:var(--t3);margin-bottom:.5rem">github contribution heatmap // 2024–2025</div>
     <div class="hm" id="heatmap"></div>
-    <div style="display:flex;align-items:center;gap:.4rem;margin-top:.4rem"><span style="font-size:10px;color:var(--t3)">less</span><div class="hc"></div><div class="hc l1"></div><div class="hc l2"></div><div class="hc l3"></div><div class="hc l4"></div><span style="font-size:10px;color:var(--t3)">more</span></div>
+    <div style="display:flex;align-items:center;gap:.4rem;margin-top:.4rem">
+      <span style="font-size:10px;color:var(--t3)">less</span>
+      <div class="hc"></div><div class="hc l1"></div><div class="hc l2"></div><div class="hc l3"></div><div class="hc l4"></div>
+      <span style="font-size:10px;color:var(--t3)">more</span>
+    </div>
   </div>
 </section>
 
-<!-- RESUME -->
+<!-- ════ RESUME ════ -->
 <section class="sec" id="resume" style="padding-top:1.5rem">
   <div class="sec-tag">RESUME</div>
   <div class="sec-title">Resume</div>
   <div class="sec-sub">// B.Tech CSE · Gold Medalist · AI/ML Engineer</div>
+
   <div class="res-btns">
-    <a class="btn btn-p" href="sakshi-selmokar-resume.pdf" download onclick="showToast('📄 Resume downloading!','success')">↓ Download Resume</a>
-    <a class="btn" href="sakshi-selmokar-resume.pdf" target="_blank">👁 View Resume</a>
+    <a class="btn btn-p" href="sakshi-selmokar-resume.pdf" download data-tip="Saves to your device" onclick="showToast('📄 Resume downloading!','success')">↓ Download Resume</a>
+    <a class="btn" href="sakshi-selmokar-resume.pdf" target="_blank" data-tip="Opens in new tab">👁 View Resume</a>
   </div>
-  <div class="resume-sec">
-    <div class="res-card"><div class="res-label">Education</div><div class="res-title">Maharashtra Institute of Technology</div><div class="res-sub">B.Tech Computer Science · 2021–2025</div><div class="res-pills"><span class="pill" style="border-color:var(--amber);color:var(--amber)">CGPA 9.45</span><span class="pill" style="border-color:var(--amber);color:var(--amber)">🥇 Gold Medalist</span></div></div>
-    <div class="res-card"><div class="res-label">Certification</div><div class="res-title">Google Cloud</div><div class="res-sub">Professional Machine Learning Engineer</div><div class="res-pills"><span class="pill" style="border-color:var(--green);color:var(--green)">✓ Certified</span></div></div>
-    <div class="res-card"><div class="res-label">Current Role</div><div class="res-title">AI/ML Engineer · Sutherland Global</div><div class="res-sub">Jun 2025 – Present · Hyderabad</div><div class="res-pills"><span class="pill">Azure ML</span><span class="pill">RAG</span><span class="pill">Claude API</span><span class="pill">APIM</span></div></div>
-    <div class="res-card"><div class="res-label">Previous Role</div><div class="res-title">AI Intern · Sutherland Global</div><div class="res-sub">Jan 2025 – May 2025 · Promoted in 5 months</div><div class="res-pills"><span class="pill">DeepStream</span><span class="pill">Face Recognition</span><span class="pill">RAG</span></div></div>
+
+  <div class="resume-sec" style="margin-top:1.5rem">
+    <div class="res-card">
+      <div class="res-label">Education</div>
+      <div class="res-title">Maharashtra Institute of Technology</div>
+      <div class="res-sub">B.Tech Computer Science (Honors in Cloud Computing) · 2021–2025 · Sambhajinagar</div>
+      <div class="res-pills">
+        <span class="pill" style="border-color:var(--amber);color:var(--amber)">CGPA 9.45</span>
+        <span class="pill" style="border-color:var(--amber);color:var(--amber)">🥇 Gold Medalist</span>
+      </div>
+    </div>
+    <div class="res-card">
+      <div class="res-label">Certification</div>
+      <div class="res-title">Google Cloud</div>
+      <div class="res-sub">Professional Machine Learning Engineer</div>
+      <div class="res-pills">
+        <span class="pill" style="border-color:var(--green);color:var(--green)">✓ Certified</span>
+      </div>
+    </div>
+    <div class="res-card">
+      <div class="res-label">Current Role</div>
+      <div class="res-title">AI/ML Engineer · Sutherland Global</div>
+      <div class="res-sub">Jun 2025 – Present · Hyderabad</div>
+      <div class="res-pills">
+        <span class="pill">Azure ML</span><span class="pill">RAG</span><span class="pill">Claude API</span><span class="pill">APIM</span>
+      </div>
+    </div>
+    <div class="res-card">
+      <div class="res-label">Previous Role</div>
+      <div class="res-title">AI Intern · Sutherland Global</div>
+      <div class="res-sub">Jan 2025 – May 2025 · Promoted in 5 months</div>
+      <div class="res-pills">
+        <span class="pill">DeepStream</span><span class="pill">Face Recognition</span><span class="pill">RAG</span>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- CONTACT -->
+<!-- ════ CONTACT ════ -->
 <section class="sec" id="contact" style="padding-top:1.5rem">
   <div class="sec-tag">CONTACT</div>
   <div class="sec-title">Get In Touch</div>
   <div class="contact-wrap">
     <div>
-      <div class="fg"><label class="fl">name</label><input class="fi" id="cname" type="text" placeholder="Your name" oninput="clearErr('cname')"><div class="field-err" id="err-cname">Please enter your name</div></div>
-      <div class="fg"><label class="fl">email</label><input class="fi" id="cemail" type="email" placeholder="your@email.com" oninput="clearErr('cemail')"><div class="field-err" id="err-cemail">Please enter a valid email</div></div>
-      <div class="fg"><label class="fl">message</label><textarea class="fi ft" id="cmsg" placeholder="Hi Sakshi, I'd love to discuss..." oninput="clearErr('cmsg')"></textarea><div class="field-err" id="err-cmsg">Please write a message</div></div>
+      <div class="fg">
+        <label class="fl">name</label>
+        <input class="fi" id="cname" type="text" placeholder="Your name" oninput="clearErr('cname')">
+        <div class="field-err" id="err-cname">Please enter your name</div>
+      </div>
+      <div class="fg">
+        <label class="fl">email</label>
+        <input class="fi" id="cemail" type="email" placeholder="your@email.com" oninput="clearErr('cemail')">
+        <div class="field-err" id="err-cemail">Please enter a valid email</div>
+      </div>
+      <div class="fg">
+        <label class="fl">message</label>
+        <textarea class="fi ft" id="cmsg" placeholder="Hi Sakshi, I'd love to discuss..." oninput="clearErr('cmsg')"></textarea>
+        <div class="field-err" id="err-cmsg">Please write a message</div>
+      </div>
       <button class="btn btn-p send-btn" id="sendBtn" onclick="submitContact()">⟶ Send Message</button>
     </div>
     <div>
       <div style="font-size:13px;color:var(--t2);margin-bottom:1.25rem;line-height:1.75">Open to interesting AI/ML roles, research collabs, and building intelligent systems. Based in Hyderabad. Usually replies within 24h.</div>
-      <a class="social" href="https://www.linkedin.com/in/sakshi-selmokar-45802a241/" target="_blank"><div class="si">in</div><div><div class="sname">LinkedIn</div><div class="shandle">sakshi-selmokar-45802a241</div></div></a>
-      <a class="social" href="https://github.com/sakshiselmokar" target="_blank"><div class="si">⌥</div><div><div class="sname">GitHub</div><div class="shandle">sakshiselmokar</div></div></a>
-      <a class="social" href="mailto:selmokarsakshi0@gmail.com"><div class="si">✉</div><div><div class="sname">Email</div><div class="shandle">selmokarsakshi0@gmail.com</div></div></a>
-      <a class="social" href="tel:+917972649804"><div class="si">📱</div><div><div class="sname">Phone</div><div class="shandle">+91 79726 49804</div></div></a>
+      <a class="social" href="https://www.linkedin.com/in/sakshi-selmokar-45802a241/" target="_blank">
+        <div class="si">in</div><div><div class="sname">LinkedIn</div><div class="shandle">sakshi-selmokar-45802a241</div></div>
+      </a>
+      <a class="social" href="https://github.com/sakshiselmokar" target="_blank">
+        <div class="si">⌥</div><div><div class="sname">GitHub</div><div class="shandle">sakshiselmokar</div></div>
+      </a>
+      <a class="social" href="mailto:selmokarsakshi0@gmail.com">
+        <div class="si">✉</div><div><div class="sname">Email</div><div class="shandle">selmokarsakshi0@gmail.com</div></div>
+      </a>
+      <a class="social" href="tel:+917972649804">
+        <div class="si">📱</div><div><div class="sname">Phone</div><div class="shandle">+91 79726 49804</div></div>
+      </a>
     </div>
   </div>
 </section>
 
 </div><!-- /page -->
 
-<!-- PROJECT MODALS -->
-<div class="overlay" id="m-sdlc">
+<!-- ════ PROJECT MODALS ════ -->
+
+<!-- StudyGenie -->
+<div class="overlay" id="m-studygenie">
   <div class="modal">
     <div class="mh">
-      <div style="display:flex;align-items:center;gap:.75rem"><span style="font-size:20px">🤖</span><div><div style="font-size:1rem;font-weight:600;color:var(--t0)">Agentic SDLC Platform</div><div style="font-size:11px;color:var(--t3);font-family:var(--mono)">personal project · plain English → deployed codebase</div></div></div>
-      <button class="mcl" onclick="closeModal('sdlc')">✕ Close</button>
+      <div style="display:flex;align-items:center;gap:.75rem">
+        <span style="font-size:20px">📚</span>
+        <div>
+          <div style="font-size:1rem;font-weight:600;color:var(--t0)">StudyGenie — AI Learning Companion</div>
+          <div style="font-size:11px;color:var(--t3);font-family:var(--mono)">github.com/sakshiselmokar/StudyGenie-AI-Learning-Companion</div>
+        </div>
+      </div>
+      <button class="mcl" onclick="closeModal('studygenie')">✕ Close</button>
     </div>
     <div class="mb">
       <div class="m2" style="margin-bottom:1.25rem">
         <div>
           <div class="mlbl">What it does</div>
-          <div class="bul">Describe a project → <span class="hl">8 agents</span> run the full SDLC automatically</div>
-          <div class="bul"><span class="hl">Clarifier → BA → Scrum → Dev → QA → Git → GitHub → DevOps</span></div>
-          <div class="bul">Self-healing <span class="hl">Dev↔QA loop</span>: pytest failures injected back into Developer prompt → full rewrite (up to 3 attempts)</div>
-          <div class="bul">Outputs: tested code, GitHub PR, Dockerfile, docker-compose, CI/CD pipeline</div>
-          <div class="bul">Deployed on <span class="hl">Railway</span> — one-click from GitHub</div>
+          <div class="bul">Voice-based Q&amp;A — speak to your AI companion, get spoken answers back</div>
+          <div class="bul">Upload <span class="hl">PDF / DOCX / TXT / CSV</span> — auto-extracts, summarizes, and generates quizzes</div>
+          <div class="bul"><span class="hl">Ollama (phi model)</span> for local LLM inference — fully offline</div>
+          <div class="bul"><span class="hl">Whisper</span> STT → LLM → <span class="hl">Piper TTS</span> audio pipeline</div>
+          <div class="bul">Gamification: XP, badges, streaks (in progress)</div>
+          <div class="bul">Privacy-first: no cloud dependency</div>
         </div>
         <div>
-          <div class="mlbl">Stack</div>
-          <div style="display:flex;flex-wrap:wrap;gap:.35rem;margin-bottom:1rem"><span class="tag">LangGraph</span><span class="tag">FastAPI</span><span class="tag">OpenRouter</span><span class="tag">SSE streaming</span><span class="tag">pytest</span><span class="tag">Docker</span><span class="tag">Railway</span><span class="tag">GitHub API</span><span class="tag">Python 3.11+</span></div>
-          <div class="mlbl" style="margin-top:.75rem">Impact</div>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:.5rem">
-            <div class="metric-box"><div class="mval">8</div><div class="mlb2">specialized agents</div></div>
-            <div class="metric-box"><div class="mval">3×</div><div class="mlb2">self-heal retries</div></div>
+          <div class="mlbl">3-Service Architecture</div>
+          <div class="arch-line">
+            <div>study-genie-voice (React/TS · port 5173)</div>
+            <div style="margin-left:.75rem;color:var(--t3)">↳ Vite + shadcn/ui + Radix UI</div>
+            <div style="color:var(--t3)">─────────────────</div>
+            <div>voice-assistant-backend (FastAPI · port 8000)</div>
+            <div style="margin-left:.75rem;color:var(--t3)">↳ POST /ask → whisper → ollama → piper</div>
+            <div style="margin-left:.75rem;color:var(--t3)">↳ GET /response_audio</div>
+            <div style="color:var(--t3)">─────────────────</div>
+            <div>sum (FastAPI · port 8001 / Streamlit 8501)</div>
+            <div style="margin-left:.75rem;color:var(--t3)">↳ POST /summarize</div>
+            <div style="margin-left:.75rem;color:var(--t3)">↳ POST /upload → quiz generation (phi3)</div>
           </div>
         </div>
       </div>
-      <a href="https://github.com/sakshiselmokar" target="_blank" class="btn btn-p" style="font-size:12px">↗ GitHub</a>
-      <a href="https://your-project.up.railway.app" target="_blank" class="btn" style="font-size:12px;margin-left:.5rem">🚀 Live Demo</a>
-    </div>
-  </div>
-</div>
-
-<div class="overlay" id="m-studygenie">
-  <div class="modal">
-    <div class="mh"><div style="display:flex;align-items:center;gap:.75rem"><span style="font-size:20px">📚</span><div><div style="font-size:1rem;font-weight:600;color:var(--t0)">StudyGenie — AI Learning Companion</div><div style="font-size:11px;color:var(--t3);font-family:var(--mono)">github.com/sakshiselmokar/StudyGenie-AI-Learning-Companion</div></div></div><button class="mcl" onclick="closeModal('studygenie')">✕ Close</button></div>
-    <div class="mb">
-      <div class="m2" style="margin-bottom:1.25rem">
-        <div><div class="mlbl">What it does</div><div class="bul">Voice-based Q&amp;A — speak to your AI companion</div><div class="bul">Upload <span class="hl">PDF / DOCX / TXT / CSV</span> → summaries + quizzes</div><div class="bul"><span class="hl">Ollama (phi)</span> for local LLM inference — fully offline</div><div class="bul"><span class="hl">Whisper</span> STT → LLM → <span class="hl">Piper TTS</span></div></div>
-        <div><div class="mlbl">3-Service Architecture</div><div class="arch-line"><div>study-genie-voice (React/TS · 5173)</div><div style="color:var(--t3)">─────</div><div>voice-assistant-backend (FastAPI · 8000)</div><div style="color:var(--t3)">─────</div><div>sum (FastAPI · 8001 / Streamlit 8501)</div></div></div>
+      <div class="divider"></div>
+      <div class="mlbl">Tech Stack</div>
+      <div style="display:flex;flex-wrap:wrap;gap:.35rem;margin-bottom:1rem">
+        <span class="tag">Ollama (phi)</span><span class="tag">Whisper STT</span><span class="tag">Piper TTS</span><span class="tag">FastAPI</span><span class="tag">Uvicorn</span>
+        <span class="tag">React 18 + TypeScript</span><span class="tag">Vite</span><span class="tag">Streamlit</span><span class="tag">LangChain</span>
+        <span class="tag">PyPDF2</span><span class="tag">python-docx</span><span class="tag">Pandas</span><span class="tag">Radix UI</span>
       </div>
-      <div style="display:flex;flex-wrap:wrap;gap:.35rem;margin-bottom:1rem"><span class="tag">Ollama</span><span class="tag">Whisper</span><span class="tag">Piper TTS</span><span class="tag">FastAPI</span><span class="tag">React 18+TS</span><span class="tag">Streamlit</span><span class="tag">LangChain</span></div>
       <a href="https://github.com/sakshiselmokar/StudyGenie-AI-Learning-Companion" target="_blank" class="btn btn-p" style="font-size:12px">↗ View on GitHub</a>
     </div>
   </div>
 </div>
 
+<!-- AirFlow AI -->
 <div class="overlay" id="m-airflow">
   <div class="modal">
-    <div class="mh"><div style="display:flex;align-items:center;gap:.75rem"><span style="font-size:20px">✋</span><div><div style="font-size:1rem;font-weight:600;color:var(--t0)">AirFlow AI — Air Drawing → Flowchart Generator</div><div style="font-size:11px;color:var(--t3);font-family:var(--mono)">computer vision · hand tracking · code generation</div></div></div><button class="mcl" onclick="closeModal('airflow')">✕ Close</button></div>
+    <div class="mh">
+      <div style="display:flex;align-items:center;gap:.75rem">
+        <span style="font-size:20px">✋</span>
+        <div>
+          <div style="font-size:1rem;font-weight:600;color:var(--t0)">AirFlow AI — Air Drawing → Flowchart Generator</div>
+          <div style="font-size:11px;color:var(--t3);font-family:var(--mono)">computer vision · hand tracking · code generation</div>
+        </div>
+      </div>
+      <button class="mcl" onclick="closeModal('airflow')">✕ Close</button>
+    </div>
     <div class="mb">
       <div class="m2" style="margin-bottom:1.25rem">
-        <div><div class="mlbl">What it does</div><div class="bul"><span class="hl">MediaPipe Hands</span> tracks fingertip via webcam</div><div class="bul">Index finger → draw shapes; two fingers → text mode (EMNIST)</div><div class="bul">Press <kbd style="background:var(--bg3);border:1px solid var(--bd2);border-radius:3px;padding:1px 5px;font-family:var(--mono);font-size:11px">e</kbd> → graph + code + explanation</div></div>
-        <div><div class="mlbl">Stack</div><div style="display:flex;flex-wrap:wrap;gap:.35rem"><span class="tag">MediaPipe</span><span class="tag">OpenCV</span><span class="tag">Python</span><span class="tag">NumPy</span><span class="tag">EMNIST</span><span class="tag">LangChain</span></div></div>
+        <div>
+          <div class="mlbl">What it does</div>
+          <div class="bul"><span class="hl">MediaPipe Hands</span> tracks fingertip in real-time via webcam</div>
+          <div class="bul">Index finger up → <span class="hl">draw shapes</span> in the air (rectangles, circles, diamonds)</div>
+          <div class="bul">Two fingers → switch to <span class="hl">text mode</span> — write letters via EMNIST stroke model</div>
+          <div class="bul">Press <kbd style="background:var(--bg3);border:1px solid var(--bd2);border-radius:3px;padding:1px 5px;font-family:var(--mono);font-size:11px">e</kbd> → pipeline runs: shape detection → graph build → flowchart → code gen → explanation</div>
+          <div class="bul">Outputs: <span class="hl">validated graph</span>, <span class="hl">flow tree</span>, <span class="hl">generated Python code</span>, <span class="hl">step-by-step explanation</span></div>
+        </div>
+        <div>
+          <div class="mlbl">Intelligence Pipeline</div>
+          <div class="arch-line">
+            <div>HandTracker (MediaPipe)</div>
+            <div style="margin-left:.75rem;color:var(--t3)">↳ gesture_detector → detect_gesture()</div>
+            <div style="margin-left:.75rem;color:var(--t3)">↳ shape_detector → detect_shape()</div>
+            <div style="margin-left:.75rem;color:var(--t3)">↳ stroke_predict (EMNIST model)</div>
+            <div style="color:var(--t3)">─────────────────</div>
+            <div>run_pipeline(data)</div>
+            <div style="margin-left:.75rem;color:var(--t3)">↳ flow_builder → create_graph()</div>
+            <div style="margin-left:.75rem;color:var(--t3)">↳ flow_validator → validate_graph()</div>
+            <div style="margin-left:.75rem;color:var(--t3)">↳ build_flow_tree()</div>
+            <div style="margin-left:.75rem;color:var(--t3)">↳ code_generator → generate_code()</div>
+            <div style="margin-left:.75rem;color:var(--t3)">↳ explainer → generate_explanation()</div>
+          </div>
+        </div>
+      </div>
+      <div class="divider"></div>
+      <div class="mlbl">Tech Stack</div>
+      <div style="display:flex;flex-wrap:wrap;gap:.35rem;margin-bottom:1rem">
+        <span class="tag">MediaPipe</span><span class="tag">OpenCV</span><span class="tag">Python</span><span class="tag">NumPy</span>
+        <span class="tag">EMNIST (text recognition)</span><span class="tag">LangChain</span><span class="tag">Custom stroke model</span>
+      </div>
+      <div style="background:var(--bg2);border:1px solid var(--bd);border-radius:8px;padding:.85rem;font-family:var(--mono);font-size:12px;color:var(--green)">
+        src/<br>
+        ├── vision/ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# hand_tracking, shape_detector, gesture_detector<br>
+        ├── intelligence/ &nbsp;# pipeline, flow_builder, code_generator, explainer<br>
+        ├── shared/ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# data_models, config, data_bridge<br>
+        └── main.py &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# HandTracker → run_pipeline()
       </div>
     </div>
   </div>
 </div>
 
+<!-- DermAI -->
 <div class="overlay" id="m-dermai">
   <div class="modal">
-    <div class="mh"><div style="display:flex;align-items:center;gap:.75rem"><span style="font-size:20px">🔬</span><div><div style="font-size:1rem;font-weight:600;color:var(--t0)">DermAI — Skin Disease Diagnosis</div><div style="font-size:11px;color:var(--t3);font-family:var(--mono)">github.com/sakshiselmokar/DermAI-Skin-Disease-Diagnosis</div></div></div><button class="mcl" onclick="closeModal('dermai')">✕ Close</button></div>
+    <div class="mh">
+      <div style="display:flex;align-items:center;gap:.75rem">
+        <span style="font-size:20px">🔬</span>
+        <div>
+          <div style="font-size:1rem;font-weight:600;color:var(--t0)">DermAI — Skin Disease Diagnosis</div>
+          <div style="font-size:11px;color:var(--t3);font-family:var(--mono)">github.com/sakshiselmokar/DermAI-Skin-Disease-Diagnosis</div>
+        </div>
+      </div>
+      <button class="mcl" onclick="closeModal('dermai')">✕ Close</button>
+    </div>
     <div class="mb">
       <div class="m2">
-        <div><div class="mlbl">What it does</div><div class="bul">AI skin disease classification across <span class="hl">5 categories</span></div><div class="bul"><span class="hl">ResNet-50</span> image classification via TensorFlow</div><div class="bul">Real-time inference — upload image, get prediction</div></div>
-        <div><div class="mlbl">Tech Stack</div><div style="display:flex;flex-wrap:wrap;gap:.35rem"><span class="tag">ResNet-50</span><span class="tag">TensorFlow</span><span class="tag">OpenCV</span><span class="tag">Flask</span><span class="tag">Python</span></div></div>
+        <div>
+          <div class="mlbl">What it does</div>
+          <div class="bul">AI skin disease classification across <span class="hl">5 disease categories</span></div>
+          <div class="bul"><span class="hl">ResNet-50</span> image classification via TensorFlow</div>
+          <div class="bul">Real-time inference pipeline — upload image, get prediction instantly</div>
+        </div>
+        <div>
+          <div class="mlbl">Tech Stack</div>
+          <div style="display:flex;flex-wrap:wrap;gap:.35rem">
+            <span class="tag">ResNet-50</span><span class="tag">TensorFlow</span><span class="tag">OpenCV</span><span class="tag">Flask</span><span class="tag">Python</span>
+          </div>
+        </div>
       </div>
       <div style="margin-top:1rem"><a href="https://github.com/sakshiselmokar/DermAI-Skin-Disease-Diagnosis" target="_blank" class="btn btn-p" style="font-size:12px">↗ View on GitHub</a></div>
     </div>
   </div>
 </div>
 
+<!-- Smart Assist -->
 <div class="overlay" id="m-smartassist">
   <div class="modal">
-    <div class="mh"><div style="display:flex;align-items:center;gap:.75rem"><span style="font-size:20px">⚡</span><div><div style="font-size:1rem;font-weight:600;color:var(--t0)">Smart Assist — Enterprise RAG at Sutherland</div><div style="font-size:11px;color:var(--t3);font-family:var(--mono)">internal // sutherland global · workforce optimization platform</div></div></div><button class="mcl" onclick="closeModal('smartassist')">✕ Close</button></div>
+    <div class="mh">
+      <div style="display:flex;align-items:center;gap:.75rem">
+        <span style="font-size:20px">⚡</span>
+        <div>
+          <div style="font-size:1rem;font-weight:600;color:var(--t0)">Smart Assist — Enterprise RAG at Sutherland</div>
+          <div style="font-size:11px;color:var(--t3);font-family:var(--mono)">internal // sutherland global · workforce optimization platform</div>
+        </div>
+      </div>
+      <button class="mcl" onclick="closeModal('smartassist')">✕ Close</button>
+    </div>
     <div class="mb">
       <div class="m2">
-        <div><div class="mlbl">What it does</div><div class="bul">Enterprise <span class="hl">Workforce Optimization</span> assistant built with <span class="hl">Claude + RAG</span></div><div class="bul">Integrates forecasting outputs into staffing recommendations</div><div class="bul">Cut information retrieval time by <span class="hl">60%</span></div></div>
-        <div><div class="mlbl">Impact</div><div style="display:grid;grid-template-columns:1fr 1fr;gap:.5rem"><div class="metric-box"><div class="mval">60%</div><div class="mlb2">retrieval time ↓</div></div><div class="metric-box"><div class="mval">25%</div><div class="mlb2">staffing accuracy ↑</div></div></div></div>
+        <div>
+          <div class="mlbl">What it does</div>
+          <div class="bul">Enterprise <span class="hl">Workforce Optimization</span> assistant built with <span class="hl">Claude + RAG</span></div>
+          <div class="bul">Integrates forecasting model outputs into intelligent staffing recommendations</div>
+          <div class="bul">Connected via <span class="hl">APIM integration layers</span> to downstream services</div>
+          <div class="bul">Cut information retrieval time by <span class="hl">60%</span></div>
+        </div>
+        <div>
+          <div class="mlbl">Impact</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:.5rem">
+            <div class="metric-box"><div class="mval">60%</div><div class="mlb2">retrieval time ↓</div></div>
+            <div class="metric-box"><div class="mval">25%</div><div class="mlb2">staffing accuracy ↑</div></div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -1365,70 +1526,96 @@ footer a{color:var(--t3);transition:color .15s}footer a:hover{color:var(--blue)}
 </footer>
 
 <script>
-// ── SYSTEM PROMPT ──
-const SYSTEM = `You are an AI assistant on Sakshi Selmokar's portfolio website. Answer ONLY based on the verified data below. Be concise, helpful, and accurate.
+// ════════════════════════════════════════
+// REAL RESUME SYSTEM PROMPT
+// ════════════════════════════════════════
+const SYSTEM = `You are an AI assistant on Sakshi Selmokar's portfolio website. Answer ONLY based on the verified data below. Be concise, helpful, and accurate. Never make up data not present here.
 
-NAME: Sakshi Selmokar | TITLE: AI/ML Engineer | GenAI | Agentic AI
-LOCATION: Hyderabad | EMAIL: selmokarsakshi0@gmail.com | PHONE: +91-7972649804
+NAME: Sakshi Selmokar
+TITLE: AI/ML Engineer | GenAI | Applied Machine Learning
+LOCATION: Hyderabad, India
+EMAIL: selmokarsakshi0@gmail.com | PHONE: +91-7972649804
 GITHUB: github.com/sakshiselmokar | LINKEDIN: linkedin.com/in/sakshi-selmokar-45802a241
 
-CURRENT JOB: AI/ML Engineer at Sutherland Global (formerly ATMECS), Jun 2025–Present
-- Workforce Optimization Platform: forecasting, RAG retrieval, recommendations
-- Azure ML forecasting → staffing accuracy +25-30%
-- Smart Assist (Claude + RAG) → retrieval 60% faster
-- APIM integration layers
+CURRENT JOB: AI/ML Engineer at Sutherland Global (formerly ATMECS), Hyderabad — Jun 2025 to Present
+- Building AI for enterprise Workforce Optimization Platform: forecasting, RAG retrieval, recommendations
+- Azure ML forecasting models → staffing accuracy improved 25-30%
+- Smart Assist (Claude + RAG pipelines) → information retrieval 60% faster
+- APIM integration layers connecting AI modules to downstream services
 
-PREVIOUS: AI Intern at Sutherland, Jan–May 2025
-- DeepStream face recognition → 98% accuracy
-- RAG healthcare assistant → queries 40% faster
-- Promoted in 5 months
+PREVIOUS: AI Intern at Sutherland Global — Jan to May 2025
+- DeepStream-based face recognition system → 98% accuracy
+- RAG-based healthcare assistant → query response 40% faster
+- PROMOTED to AI/ML Engineer in 5 months
 
-PERSONAL PROJECTS:
-1. Agentic SDLC Platform (personal project, NOT Sutherland)
-   - Autonomous SDLC: plain English → tested, GitHub-pushed, deployed codebase
-   - 8 agents: Clarifier, BA, Scrum Master, Developer, QA, Git, GitHub, DevOps
-   - Self-healing Dev↔QA loop: pytest failures injected back → full rewrite (3 retries)
-   - Stack: LangGraph, FastAPI, OpenRouter, SSE streaming, pytest, Docker, Railway
-   - Deployed on Railway
+PROJECTS:
+1. StudyGenie (public GitHub)
+   - Gamified AI learning platform, 3-service architecture
+   - voice-assistant-backend: FastAPI port 8000, Whisper STT → Ollama (phi model) → Piper TTS
+   - sum: FastAPI port 8001 / Streamlit 8501, POST /summarize, POST /upload (quiz generation with phi3)
+   - Frontend: React 18 + TypeScript + Vite + shadcn/ui, port 5173
+   - Local-first, no cloud, fully offline
+   - Stack: Ollama, Whisper, Piper TTS, FastAPI, LangChain, PyPDF2, python-docx, Pandas
 
-2. StudyGenie (public GitHub)
-   - Gamified AI learning, 3-service architecture, local-first
-   - Whisper STT → Ollama (phi) → Piper TTS
-   - Stack: Ollama, FastAPI, React 18+TS, Streamlit, LangChain, PyPDF2
+2. AirFlow AI (personal project)
+   - Draw flowcharts in mid-air via hand gestures
+   - MediaPipe Hands → fingertip tracking → shape detection (rectangles, circles, diamonds)
+   - Two-finger gesture = text mode (EMNIST stroke model for letter recognition)
+   - Press 'e' → runs intelligence pipeline: flow_builder → flow_validator → code_generator → explainer
+   - Outputs: validated graph, flow tree, generated Python code, explanation
+   - Stack: MediaPipe, OpenCV, Python, NumPy, EMNIST model, LangChain
 
-3. AirFlow AI (personal)
-   - Draw flowcharts mid-air via hand gestures → code generation
-   - Stack: MediaPipe, OpenCV, Python, EMNIST, LangChain
+3. DermAI (public GitHub)
+   - Skin disease diagnosis: 5 disease categories
+   - ResNet-50 via TensorFlow, real-time inference
+   - Stack: ResNet-50, TensorFlow, OpenCV, Flask
 
-4. DermAI (public GitHub)
-   - Skin disease diagnosis: 5 categories, ResNet-50, TensorFlow
+4. Smart Assist (internal, Sutherland)
+   - Claude + RAG for Workforce Optimization
+   - Integrates forecasting outputs into recommendations
+   - 60% faster retrieval, 25% better staffing accuracy
+   - Stack: Claude API, RAG, APIM, Azure ML, FAISS
 
-WORK PROJECT (Sutherland internal):
-- Smart Assist: Claude + RAG for Workforce Optimization, 60% faster retrieval
+EDUCATION: B.Tech Computer Science (Honors in Cloud Computing), MIT Sambhajinagar, 2021-2025, CGPA 9.45, CSE Gold Medalist
 
-EDUCATION: B.Tech CSE (Honors Cloud Computing), MIT Sambhajinagar, 2021–2025, CGPA 9.45, CSE Gold Medalist
 CERTIFICATION: Google Cloud Professional Machine Learning Engineer
 
-SKILLS: Python, JavaScript, SQL | PyTorch, TensorFlow, Scikit-learn, OpenCV | RAG, LangChain, LangGraph, FAISS, ChromaDB, Ollama | LSTM, ARIMA, Prophet, XGBoost | Azure ML, APIM, DeepStream, Docker, Railway, FastAPI | MySQL, Firebase, SQLite
+SKILLS:
+- Languages: Python, JavaScript, SQL
+- ML: PyTorch, TensorFlow, Scikit-learn, OpenCV
+- GenAI/RAG: RAG, LangChain, Transformers, FAISS, ChromaDB, Vector Search, Ollama
+- Forecasting: LSTM, ARIMA, Prophet, XGBoost
+- Tools: Azure ML, APIM, NVIDIA DeepStream, Git, Power BI, FastAPI, Streamlit, Uvicorn
+- Databases: MySQL, Firebase, SQLite
 
-ACHIEVEMENTS: SIH 2023 National Winner | CGPA 9.45 Gold Medal | ATMECS GenAI Hackathon Top 12/4000+ | Promoted in 5 months
+ACHIEVEMENTS:
+- Smart India Hackathon 2023 — National Winner (16 finalist teams)
+- CSE Gold Medalist, CGPA 9.45
+- ATMECS GenAI Hackathon — Top 12 / 4000+ participants
+- Promoted Intern → AI/ML Engineer in 5 months
 
-If asked something not here: "I don't have that info — contact Sakshi at selmokarsakshi0@gmail.com"`;
+If asked something not here, say "I don't have that info, but you can contact Sakshi directly at selmokarsakshi0@gmail.com"`;
 
 let chatHistory = [];
 
 async function sendChat() {
   const inp = document.getElementById('cwIn');
   const q = inp.value.trim(); if(!q) return;
-  inp.value = ''; updateCounter();
+  inp.value = '';
   addMsg('user', q);
   chatHistory.push({role:'user', content: q});
   const typing = addTyping();
   try {
+    // Calls Netlify serverless function — key stays secret on server
     const res = await fetch('/.netlify/functions/chat', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ messages: [{ role: 'system', content: SYSTEM }, ...chatHistory] })
+      body: JSON.stringify({
+        messages: [
+          { role: 'system', content: SYSTEM },
+          ...chatHistory
+        ]
+      })
     });
     const data = await res.json();
     const text = data.choices?.[0]?.message?.content || 'Sorry, could not get a response.';
@@ -1440,7 +1627,9 @@ async function sendChat() {
     addMsg('ai', "Connection issue. Reach Sakshi at selmokarsakshi0@gmail.com");
   }
 }
+
 function ask(q) { document.getElementById('cwIn').value=q; sendChat(); }
+
 function addMsg(role, text) {
   const msgs = document.getElementById('cwMsgs');
   const d = document.createElement('div');
@@ -1451,25 +1640,32 @@ function addMsg(role, text) {
   d.innerHTML = isUser ? bub+av : av+bub;
   msgs.appendChild(d); msgs.scrollTop = msgs.scrollHeight;
 }
+
 function addTyping() {
   const msgs = document.getElementById('cwMsgs');
   const d = document.createElement('div'); d.className='msg';
   d.innerHTML='<div class="msg-av av-ai">S</div><div class="bubble ai-b typing"><span></span><span></span><span></span></div>';
   msgs.appendChild(d); msgs.scrollTop=msgs.scrollHeight; return d;
 }
+
 function esc(t){return t.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
 function formatText(t,isUser){
   if(isUser) return esc(t);
-  return esc(t).replace(/\*\*(.*?)\*\*/g,'<strong>$1</strong>').replace(/^- (.+)$/gm,'<div style="margin:.2rem 0 .2rem .75rem">▸ $1</div>').replace(/\n/g,'<br>');
+  return esc(t)
+    .replace(/\*\*(.*?)\*\*/g,'<strong>$1</strong>')
+    .replace(/^- (.+)$/gm,'<div style="margin:.2rem 0 .2rem .75rem">▸ $1</div>')
+    .replace(/\n/g,'<br>');
 }
 
-// ── TERMINAL ──
+// ════════════════════════════════════════
+// TERMINAL ANIMATION
+// ════════════════════════════════════════
 const termLines = [
   'Forecasting model → Azure ML · epoch 22/50 · loss ↓',
   'Smart Assist RAG pipeline → retrieval 60% faster',
-  'Agentic SDLC: QA agent → 2 tests failed, retrying...',
-  'Agentic SDLC: Dev agent → full rewrite with error ctx',
-  'Agentic SDLC: DevOps agent → Dockerfile generated',
+  'APIM integration layer · downstream services synced',
+  'DeepStream face recognition → 98% accuracy · live',
+  'RAG healthcare assistant · query latency ↓ 40%',
   'StudyGenie: Ollama (phi) → whisper → piper TTS',
   'AirFlow AI: gesture detected → shape: RECTANGLE',
   'DermAI: ResNet-50 inference → prediction complete',
@@ -1478,17 +1674,23 @@ const termLines = [
 ];
 let ti = 0;
 function addTermLine() {
-  const tb = document.getElementById('termBody'); if(!tb) return;
+  const tb = document.getElementById('termBody');
+  if(!tb) return;
   if(ti >= termLines.length) ti=0;
-  const d = document.createElement('div'); d.className='tl';
+  const d = document.createElement('div');
+  d.className='tl';
   d.innerHTML=`<span class="tp">▸</span><span class="tv" style="margin-left:6px">${termLines[ti]}</span>`;
-  tb.appendChild(d); setTimeout(()=>d.classList.add('vis'),30);
+  tb.appendChild(d);
+  setTimeout(()=>d.classList.add('vis'),30);
   if(tb.children.length > 9) tb.removeChild(tb.children[0]);
   ti++;
 }
-setInterval(addTermLine, 2000); addTermLine(); addTermLine();
+setInterval(addTermLine, 2000);
+addTermLine(); addTermLine();
 
-// ── NEURAL CANVAS ──
+// ════════════════════════════════════════
+// NEURAL CANVAS
+// ════════════════════════════════════════
 (function(){
   const c=document.getElementById('net'), ctx=c.getContext('2d');
   let W,H,nodes=[],sigs=[];
@@ -1507,20 +1709,45 @@ setInterval(addTermLine, 2000); addTermLine(); addTermLine();
   draw();
 })();
 
-// ── COUNTERS ──
-function animCount(el,target,suf,dur=1300){let start=null,prev=-1;function step(ts){if(!start)start=ts;const p=Math.min((ts-start)/dur,1),v=Math.floor(p*target);if(v!==prev){el.textContent=v+suf;prev=v;}if(p<1)requestAnimationFrame(step);else el.textContent=target+suf;}requestAnimationFrame(step);}
-const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){[{id:'c0',t:9,s:'.45'},{id:'c1',t:98,s:'%'},{id:'c2',t:25,s:'%'},{id:'c3',t:60,s:'%'},{id:'c4',t:40,s:'%'},{id:'c5',t:5,s:''}].forEach((x,i)=>setTimeout(()=>{const el=document.getElementById(x.id);if(el)animCount(el,x.t,x.s);},i*100));obs.disconnect();}});},{threshold:.3});
+// ════════════════════════════════════════
+// COUNTERS
+// ════════════════════════════════════════
+function animCount(el,target,suf,dur=1300){
+  let start=null,prev=-1;
+  function step(ts){if(!start)start=ts;const p=Math.min((ts-start)/dur,1),v=Math.floor(p*target);if(v!==prev){el.textContent=v+suf;prev=v;}if(p<1)requestAnimationFrame(step);else el.textContent=target+suf;}
+  requestAnimationFrame(step);
+}
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      [
+        {id:'c0',t:9,s:'.45'},{id:'c1',t:98,s:'%'},{id:'c2',t:25,s:'%'},
+        {id:'c3',t:60,s:'%'},{id:'c4',t:40,s:'%'},{id:'c5',t:5,s:''}
+      ].forEach((x,i)=>setTimeout(()=>{const el=document.getElementById(x.id);if(el)animCount(el,x.t,x.s);},i*100));
+      obs.disconnect();
+    }
+  });
+},{threshold:.3});
 const sg=document.getElementById('statsGrid');if(sg)obs.observe(sg);
 
-// ── HEATMAP ──
-(function(){const hm=document.getElementById('heatmap');if(!hm)return;for(let i=0;i<210;i++){const c=document.createElement('div');c.className='hc';const r=Math.random();if(r>.88)c.classList.add('l4');else if(r>.72)c.classList.add('l3');else if(r>.58)c.classList.add('l2');else if(r>.46)c.classList.add('l1');hm.appendChild(c);}})();
+// ════════════════════════════════════════
+// HEATMAP
+// ════════════════════════════════════════
+(function(){
+  const hm=document.getElementById('heatmap');if(!hm)return;
+  for(let i=0;i<210;i++){const c=document.createElement('div');c.className='hc';const r=Math.random();if(r>.88)c.classList.add('l4');else if(r>.72)c.classList.add('l3');else if(r>.58)c.classList.add('l2');else if(r>.46)c.classList.add('l1');hm.appendChild(c);}
+})();
 
-// ── MODALS ──
+// ════════════════════════════════════════
+// MODALS
+// ════════════════════════════════════════
 function openModal(id){document.getElementById('m-'+id).classList.add('open');document.body.style.overflow='hidden';}
 function closeModal(id){document.getElementById('m-'+id).classList.remove('open');document.body.style.overflow='';}
-document.querySelectorAll('.overlay').forEach(m=>m.addEventListener('click',e=>{if(e.target===m){m.classList.remove('open');document.body.style.overflow='';resetMic();}}));
+document.querySelectorAll('.overlay').forEach(m=>m.addEventListener('click',e=>{if(e.target===m){m.classList.remove('open');document.body.style.overflow=''}}));
 
-// ── CMD PALETTE ──
+// ════════════════════════════════════════
+// CMD PALETTE
+// ════════════════════════════════════════
 const cpItems=[
   {l:'Home',i:'🏠',m:'nav',a:()=>go('home')},
   {l:'Experience at Sutherland',i:'💼',m:'nav',a:()=>go('experience')},
@@ -1528,102 +1755,227 @@ const cpItems=[
   {l:'Chat with Sakshi AI',i:'⚡',m:'chat',a:()=>go('chat')},
   {l:'Timeline',i:'📅',m:'nav',a:()=>go('timeline')},
   {l:'Contact',i:'✉',m:'nav',a:()=>go('contact')},
-  {l:'Agentic SDLC Platform — details',i:'🤖',m:'project',a:()=>openModal('sdlc')},
   {l:'StudyGenie — details',i:'📚',m:'project',a:()=>openModal('studygenie')},
   {l:'AirFlow AI — details',i:'✋',m:'project',a:()=>openModal('airflow')},
   {l:'DermAI — details',i:'🔬',m:'project',a:()=>openModal('dermai')},
   {l:'Smart Assist — details',i:'⚡',m:'project',a:()=>openModal('smartassist')},
-  {l:'AI Labs — Agentic SDLC',i:'🤖',m:'lab',a:()=>openLab('sd')},
-  {l:'AI Labs — StudyGenie',i:'📚',m:'lab',a:()=>openLab('sg')},
-  {l:'AI Labs — AirFlow AI',i:'✋',m:'lab',a:()=>openLab('af')},
-  {l:'AI Labs — DermAI',i:'🔬',m:'lab',a:()=>openLab('dm')},
-  {l:'Interactive AI Labs',i:'⚗️',m:'nav',a:()=>go('ailabs')},
-  {l:'Resume',i:'📄',m:'nav',a:()=>go('resume')},
-  {l:'Download Resume',i:'↓',m:'action',a:()=>document.querySelector('a[download]')?.click()},
 ];
 function openCp(){document.getElementById('cpOverlay').classList.add('open');document.getElementById('cpIn').value='';renderCp('');setTimeout(()=>document.getElementById('cpIn').focus(),50);}
-function renderCp(q){const f=cpItems.filter(i=>i.l.toLowerCase().includes(q.toLowerCase()));document.getElementById('cpRes').innerHTML=f.map((it,i)=>`<div class="cp-item" onclick="cpRun(${i},'${q.replace(/'/g,"\\'")}')"><div class="cp-ico">${it.i}</div><span>${it.l}</span><span class="cp-meta">${it.m}</span></div>`).join('');}
+function renderCp(q){
+  const f=cpItems.filter(i=>i.l.toLowerCase().includes(q.toLowerCase()));
+  document.getElementById('cpRes').innerHTML=f.map((it,i)=>
+    `<div class="cp-item" onclick="cpRun(${i},'${q.replace(/'/g,"\\'")}')"><div class="cp-ico">${it.i}</div><span>${it.l}</span><span class="cp-meta">${it.m}</span></div>`
+  ).join('');
+}
 function cpRun(i,q){const f=cpItems.filter(x=>x.l.toLowerCase().includes(q.toLowerCase()));if(f[i])f[i].a();document.getElementById('cpOverlay').classList.remove('open');}
 document.getElementById('cpIn').addEventListener('input',e=>renderCp(e.target.value));
 document.getElementById('cpOverlay').addEventListener('click',e=>{if(e.target===document.getElementById('cpOverlay'))document.getElementById('cpOverlay').classList.remove('open');});
 document.addEventListener('keydown',e=>{if((e.metaKey||e.ctrlKey)&&e.key==='k'){e.preventDefault();openCp();}if(e.key==='Escape')document.getElementById('cpOverlay').classList.remove('open');});
-function go(id){document.getElementById(id)?.scrollIntoView({behavior:'smooth'});}
 
-// ── LAB MODALS ──
-function openLab(id){document.getElementById('lab-'+id).classList.add('open');document.body.style.overflow='hidden';if(id==='af')setTimeout(()=>replayCode(),400);}
-function closeLab(id){document.getElementById('lab-'+id).classList.remove('open');document.body.style.overflow='';resetMic();}
-function labTab(lab,panel,el){const modal=document.getElementById('lab-'+lab);modal.querySelectorAll('.lab-tab').forEach(t=>t.classList.remove('on'));modal.querySelectorAll('.lab-panel').forEach(p=>p.classList.remove('on'));el.classList.add('on');document.getElementById(lab+'-'+panel).classList.add('on');if(lab==='af'&&panel==='code')replayCode();}
+// ════════════════════════════════════════
+// CONFIG — swap API key here or in config.js
+// ════════════════════════════════════════
+// TODO: create config.js with: const OPENROUTER_API_KEY = "YOUR_KEY";
+// Then add it as a script tag before this one in the HTML.
+// The chat below uses Anthropic directly; to switch to OpenRouter change
+// the fetch URL to https://openrouter.ai/api/v1/chat/completions and headers.
 
-// ── PIPELINE ANIMATOR ──
-function animatePipeline(prefix,count){const nodes=[];for(let i=0;i<count;i++){const el=document.getElementById(prefix+'p'+i);if(el)nodes.push(el);}nodes.forEach(n=>n.classList.remove('active','done'));let i=0;function next(){if(i>0){nodes[i-1].classList.remove('active');nodes[i-1].classList.add('done');}if(i<nodes.length){nodes[i].classList.add('active');i++;setTimeout(next,700);}}next();}
-
-// ── AGENTIC SDLC DEMO ──
-const sdAgentMessages = [
-  {agent:'clarifier',color:'var(--blue)',msg:'Scoring ambiguity... clarity: 78/100. Proceeding.'},
-  {agent:'ba',color:'var(--purple)',msg:'Parsed requirements → 3 user stories, 8 acceptance criteria'},
-  {agent:'scrum',color:'var(--amber)',msg:'Sprint tickets created: TICKET-001 (3pts), TICKET-002 (5pts), TICKET-003 (2pts)'},
-  {agent:'developer',color:'var(--green)',msg:'Writing code for TICKET-001...'},
-  {agent:'qa',color:'#f87171',msg:'Running pytest... 2/3 tests FAILED'},
-  {agent:'developer',color:'var(--green)',msg:'Retry 1/3 — injecting error context, full rewrite...'},
-  {agent:'qa',color:'var(--green)',msg:'All tests PASSED ✓ (retry 1)'},
-  {agent:'developer',color:'var(--green)',msg:'Writing code for TICKET-002...'},
-  {agent:'qa',color:'var(--green)',msg:'All tests PASSED ✓'},
-  {agent:'git',color:'var(--blue)',msg:'Committed sprint-1 with tag v0.1.0'},
-  {agent:'github',color:'var(--blue)',msg:'Pushed to GitHub · PR #1 opened'},
-  {agent:'devops',color:'var(--purple)',msg:'Generated: Dockerfile, docker-compose.yml, .github/workflows/ci.yml'},
-  {agent:'system',color:'var(--green)',msg:'✓ Pipeline complete — fully tested, deployed codebase ready'},
-];
-let sdRunning = false;
-function runSdDemo(){
-  if(sdRunning) return;
-  const prompt = document.getElementById('sdPrompt').value.trim();
-  if(!prompt) { document.getElementById('sdPrompt').focus(); return; }
-  sdRunning = true;
-  document.getElementById('sdDemoInput').style.display='none';
-  document.getElementById('sdAgentLog').style.display='block';
-  const log = document.getElementById('sdLogBody');
-  log.innerHTML = `<div style="color:var(--t3);margin-bottom:.5rem">▸ input: "${prompt}"</div>`;
-  let i = 0;
-  function nextMsg(){
-    if(i < sdAgentMessages.length){
-      const m = sdAgentMessages[i];
-      const line = document.createElement('div');
-      line.style.cssText = `color:var(--t2);line-height:2;display:flex;gap:.5rem`;
-      line.innerHTML = `<span style="color:${m.color};min-width:80px">[${m.agent}]</span><span>${m.msg}</span>`;
-      log.appendChild(line);
-      log.scrollTop = log.scrollHeight;
-      i++; setTimeout(nextMsg, 600 + Math.random()*400);
-    } else { sdRunning = false; }
-  }
-  nextMsg();
+// ════════════════════════════════════════
+// LAB MODAL SYSTEM
+// ════════════════════════════════════════
+function openLab(id) {
+  document.getElementById('lab-'+id).classList.add('open');
+  document.body.style.overflow = 'hidden';
+  if(id==='af') setTimeout(()=>replayCode(),400);
 }
-function resetSdDemo(){document.getElementById('sdDemoInput').style.display='block';document.getElementById('sdAgentLog').style.display='none';document.getElementById('sdLogBody').innerHTML='';document.getElementById('sdPrompt').value='';sdRunning=false;}
+function closeLab(id) {
+  document.getElementById('lab-'+id).classList.remove('open');
+  document.body.style.overflow = '';
+  resetMic();
+}
+document.querySelectorAll('.overlay').forEach(m => m.addEventListener('click', e => {
+  if(e.target===m) { m.classList.remove('open'); document.body.style.overflow=''; resetMic(); }
+}));
 
-// ── STUDYGENIE DEMO ──
-function runSgDemo(){
-  document.getElementById('sgUpload').style.display='none';
-  document.getElementById('sgProc').style.display='block';
-  const steps=['sgs0','sgs1','sgs2','sgs3','sgs4','sgs5'];
-  steps.forEach(s=>{const el=document.getElementById(s);el.classList.remove('active','done');el.querySelector('.proc-icon').textContent='○';});
-  let i=0;
-  function nextStep(){if(i>0){const prev=document.getElementById(steps[i-1]);prev.classList.remove('active');prev.classList.add('done');prev.querySelector('.proc-icon').textContent='✓';}if(i<steps.length){const cur=document.getElementById(steps[i]);cur.classList.add('active');cur.querySelector('.proc-icon').textContent='◉';i++;setTimeout(nextStep,650);}else{setTimeout(()=>{document.getElementById('sgProc').style.display='none';document.getElementById('sgResults').style.display='block';},300);}}
+function labTab(lab, panel, el) {
+  const modal = document.getElementById('lab-'+lab);
+  modal.querySelectorAll('.lab-tab').forEach(t=>t.classList.remove('on'));
+  modal.querySelectorAll('.lab-panel').forEach(p=>p.classList.remove('on'));
+  el.classList.add('on');
+  document.getElementById(lab+'-'+panel).classList.add('on');
+  if(lab==='af' && panel==='code') replayCode();
+}
+
+// ════════════════════════════════════════
+// PIPELINE ANIMATOR
+// ════════════════════════════════════════
+function animatePipeline(prefix, count) {
+  const nodes = [];
+  for(let i=0;i<count;i++) {
+    const el = document.getElementById(prefix+'p'+i);
+    if(el) nodes.push(el);
+  }
+  nodes.forEach(n => n.classList.remove('active','done'));
+  let i = 0;
+  function next() {
+    if(i > 0) { nodes[i-1].classList.remove('active'); nodes[i-1].classList.add('done'); }
+    if(i < nodes.length) { nodes[i].classList.add('active'); i++; setTimeout(next, 700); }
+  }
+  next();
+}
+
+// ════════════════════════════════════════
+// STUDYGENIE DEMO
+// ════════════════════════════════════════
+function runSgDemo() {
+  document.getElementById('sgUpload').style.display = 'none';
+  document.getElementById('sgProc').style.display = 'block';
+  const steps = ['sgs0','sgs1','sgs2','sgs3','sgs4','sgs5'];
+  steps.forEach(s => {
+    const el = document.getElementById(s);
+    el.classList.remove('active','done');
+    el.querySelector('.proc-icon').textContent = '○';
+  });
+  let i = 0;
+  function nextStep() {
+    if(i>0) {
+      const prev = document.getElementById(steps[i-1]);
+      prev.classList.remove('active'); prev.classList.add('done');
+      prev.querySelector('.proc-icon').textContent = '✓';
+    }
+    if(i < steps.length) {
+      const cur = document.getElementById(steps[i]);
+      cur.classList.add('active');
+      cur.querySelector('.proc-icon').textContent = '◉';
+      i++; setTimeout(nextStep, 650);
+    } else {
+      setTimeout(()=>{
+        document.getElementById('sgProc').style.display='none';
+        document.getElementById('sgResults').style.display='block';
+      }, 300);
+    }
+  }
   nextStep();
 }
-function resetSgDemo(){document.getElementById('sgUpload').style.display='block';document.getElementById('sgProc').style.display='none';document.getElementById('sgResults').style.display='none';}
-function selectOpt(el,correct){document.querySelectorAll('.quiz-opt').forEach(o=>o.classList.remove('correct','wrong'));el.classList.add(correct?'correct':'wrong');if(!correct)setTimeout(()=>document.querySelectorAll('.quiz-opt')[2].classList.add('correct'),600);}
+function resetSgDemo() {
+  document.getElementById('sgUpload').style.display='block';
+  document.getElementById('sgProc').style.display='none';
+  document.getElementById('sgResults').style.display='none';
+}
+function selectOpt(el, correct) {
+  document.querySelectorAll('.quiz-opt').forEach(o=>o.classList.remove('correct','wrong'));
+  el.classList.add(correct ? 'correct' : 'wrong');
+  if(!correct) {
+    setTimeout(()=>document.querySelectorAll('.quiz-opt')[2].classList.add('correct'), 600);
+  }
+}
 
-// ── VOICE DEMO ──
-let recognition=null,micActive=false;
-const voiceQs=['Tell me about neural networks','What is a transformer model?','Explain overfitting','What is gradient descent?'];
-const voiceAs=['Neural networks are computational models inspired by the brain. They consist of layers of interconnected nodes that transform input data through weighted connections and activation functions.','Transformers use self-attention mechanisms to process sequences in parallel — attending to all positions simultaneously. This makes them far faster to train than RNNs and gives exceptional NLP performance.','Overfitting happens when a model learns training data too precisely, memorising noise rather than generalisable patterns. It shows high training accuracy but poor test accuracy. Dropout, L2 penalty, and early stopping help prevent it.','Gradient descent iteratively adjusts model parameters in the direction that minimises loss. Variants like Adam and SGD with momentum are widely used in deep learning.'];
-function toggleMic(){const btn=document.getElementById('micBtn'),status=document.getElementById('micStatus');if(micActive){stopMic();return;}micActive=true;btn.classList.add('listening');document.getElementById('voiceQuestion').style.display='none';document.getElementById('voiceAnswer').style.display='none';if('webkitSpeechRecognition'in window||'SpeechRecognition'in window){const SR=window.SpeechRecognition||window.webkitSpeechRecognition;recognition=new SR();recognition.continuous=false;recognition.interimResults=true;recognition.onstart=()=>status.textContent='🎤 Listening...';recognition.onresult=e=>{const t=Array.from(e.results).map(r=>r[0].transcript).join('');status.textContent=t;if(e.results[e.results.length-1].isFinal)showVoiceResponse(t);};recognition.onerror=()=>simulateVoice();recognition.onend=()=>stopMic();recognition.start();}else{status.textContent='🎤 Listening...';setTimeout(()=>simulateVoice(),1800);}}
-function simulateVoice(){const idx=Math.floor(Math.random()*voiceQs.length);showVoiceResponse(voiceQs[idx],voiceAs[idx]);}
-function showVoiceResponse(question,answer){stopMic();const qEl=document.getElementById('voiceQuestion'),aEl=document.getElementById('voiceAnswer');qEl.textContent='🗣 "'+question+'"';qEl.classList.add('show');qEl.style.display='block';setTimeout(()=>{const ans=answer||voiceAs[Math.floor(Math.random()*voiceAs.length)];aEl.textContent='🤖 '+ans;aEl.classList.add('show');aEl.style.display='block';if('speechSynthesis'in window){const utt=new SpeechSynthesisUtterance(ans);window.speechSynthesis.speak(utt);}},600);}
-function stopMic(){micActive=false;const btn=document.getElementById('micBtn');if(btn)btn.classList.remove('listening');const status=document.getElementById('micStatus');if(status)status.textContent='Click to start listening';if(recognition){try{recognition.stop();}catch(e){}recognition=null;}}
-function resetMic(){stopMic();if('speechSynthesis'in window)window.speechSynthesis.cancel();}
+// ════════════════════════════════════════
+// VOICE DEMO
+// ════════════════════════════════════════
+let recognition = null, micActive = false;
+const voiceQs = [
+  "Tell me about neural networks",
+  "What is a transformer model?",
+  "Explain overfitting",
+  "What is gradient descent?",
+];
+const voiceAs = [
+  "Neural networks are computational models inspired by the brain. They consist of layers of interconnected nodes that transform input data through weighted connections and activation functions. Deep networks with many layers are especially powerful for tasks like image recognition and language understanding.",
+  "Transformers are a neural architecture using self-attention mechanisms to process sequences in parallel. Instead of reading tokens one by one, they attend to all positions simultaneously — this makes them far faster to train than RNNs and gives them exceptional performance on NLP tasks.",
+  "Overfitting happens when a model learns the training data too precisely, memorising noise rather than learning generalisable patterns. It shows high training accuracy but poor test accuracy. Regularisation techniques like dropout, L2 penalty, and early stopping help prevent it.",
+  "Gradient descent is an optimisation algorithm that iteratively adjusts model parameters in the direction that minimises the loss function. The learning rate controls how large each step is. Variants like Adam and SGD with momentum are widely used in deep learning.",
+];
 
-// ── AIRFLOW CODE TYPER ──
-const codeHtml=`<span class="c-cm"># AirFlow AI — Generated Flow</span>
+function toggleMic() {
+  const btn = document.getElementById('micBtn');
+  const status = document.getElementById('micStatus');
+  if(micActive) { stopMic(); return; }
+
+  micActive = true;
+  btn.classList.add('listening');
+  document.getElementById('voiceQuestion').style.display='none';
+  document.getElementById('voiceAnswer').style.display='none';
+
+  if('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
+    const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+    recognition = new SR();
+    recognition.continuous = false;
+    recognition.interimResults = true;
+    recognition.onstart = () => status.textContent = '🎤 Listening...';
+    recognition.onresult = e => {
+      const t = Array.from(e.results).map(r=>r[0].transcript).join('');
+      status.textContent = t;
+      if(e.results[e.results.length-1].isFinal) showVoiceResponse(t);
+    };
+    recognition.onerror = () => simulateVoice();
+    recognition.onend = () => stopMic();
+    recognition.start();
+  } else {
+    status.textContent = '🎤 Listening...';
+    setTimeout(()=>simulateVoice(), 1800);
+  }
+}
+
+function simulateVoice() {
+  const idx = Math.floor(Math.random()*voiceQs.length);
+  showVoiceResponse(voiceQs[idx], voiceAs[idx]);
+}
+
+function showVoiceResponse(question, answer) {
+  stopMic();
+  const qEl = document.getElementById('voiceQuestion');
+  const aEl = document.getElementById('voiceAnswer');
+  qEl.textContent = '🗣 "' + question + '"';
+  qEl.classList.add('show'); qEl.style.display='block';
+  setTimeout(() => {
+    const ans = answer || voiceAs[Math.floor(Math.random()*voiceAs.length)];
+    aEl.textContent = '🤖 ' + ans;
+    aEl.classList.add('show'); aEl.style.display='block';
+    // Optional TTS
+    if('speechSynthesis' in window) {
+      const utt = new SpeechSynthesisUtterance(ans);
+      utt.rate = 1; utt.pitch = 1;
+      window.speechSynthesis.speak(utt);
+    }
+  }, 600);
+}
+
+function stopMic() {
+  micActive = false;
+  const btn = document.getElementById('micBtn');
+  if(btn) btn.classList.remove('listening');
+  const status = document.getElementById('micStatus');
+  if(status) status.textContent = 'Click to start listening';
+  if(recognition) { try{recognition.stop();}catch(e){} recognition=null; }
+}
+function resetMic() { stopMic(); if('speechSynthesis' in window) window.speechSynthesis.cancel(); }
+
+// ════════════════════════════════════════
+// AIRFLOW — VIDEO PLACEHOLDER (no longer needed as onclick)
+// ════════════════════════════════════════
+function playAfVideo() { /* placeholder — swap video-ph div with your video tag */ }
+
+// ════════════════════════════════════════
+// AIRFLOW — CODE TYPER
+// ════════════════════════════════════════
+const codeLines = [
+  {t:'cm', c:'# AirFlow AI — Generated Flow'},
+  {t:'cm', c:'# Detected: START → PROCESS → DECISION → END'},
+  {t:'', c:''},
+  {t:'kw', c:'def'}, // special — inline
+  {t:'flow', c:''},
+  {t:'cm', c:'  # Entry point'},
+  {t:'fn', c:'  start'},
+  {t:'fn', c:'  process_data'},
+  {t:'kw2',c:'  if'},
+  {t:'fn', c:'    action_a'},
+  {t:'kw2',c:'  else'},
+  {t:'fn', c:'    action_b'},
+  {t:'fn', c:'  end'},
+];
+
+const codeHtml = `<span class="c-cm"># AirFlow AI — Generated Flow</span>
 <span class="c-cm"># Detected: START → PROCESS → DECISION → END</span>
 
 <span class="c-kw">def</span> <span class="c-fn">flow</span>():
@@ -1640,31 +1992,190 @@ const codeHtml=`<span class="c-cm"># AirFlow AI — Generated Flow</span>
 
 <span class="c-kw">if</span> __name__ == <span class="c-str">"__main__"</span>:
     flow()`;
-function replayCode(){const out=document.getElementById('codeOutput');if(!out)return;out.innerHTML='';let i=0;function typeChar(){if(i<codeHtml.length){out.innerHTML=codeHtml.slice(0,i+1)+'<span class="typewriter"> </span>';i+=Math.floor(Math.random()*3)+1;setTimeout(typeChar,18);}else{out.innerHTML=codeHtml;}}typeChar();}
 
-// ── DERMAI DEMO ──
-const dermSteps=['Preprocessing image...','Normalising to 224×224...','Running ResNet-50 forward pass...','Applying softmax...','Generating confidence scores...'];
-const dermVals=[97,2,1,0,0];
-function runDermDemo(){document.getElementById('dmDropWrap').style.display='none';document.getElementById('dmAnalyzing').style.display='block';let s=0;const stepEl=document.getElementById('dmStep');function nextDermStep(){if(s<dermSteps.length){stepEl.textContent=dermSteps[s];s++;setTimeout(nextDermStep,600);}else{document.getElementById('dmAnalyzing').style.display='none';document.getElementById('dmResults').style.display='block';dermVals.forEach((v,i)=>{setTimeout(()=>{document.getElementById('dc'+i).style.width=v+'%';document.getElementById('dp'+i).textContent=v+'%';},i*120);});}}nextDermStep();}
-function resetDerm(){document.getElementById('dmDropWrap').style.display='block';document.getElementById('dmAnalyzing').style.display='none';document.getElementById('dmResults').style.display='none';dermVals.forEach((v,i)=>{document.getElementById('dc'+i).style.width='0';document.getElementById('dp'+i).textContent='—';});}
+function replayCode() {
+  const out = document.getElementById('codeOutput');
+  if(!out) return;
+  out.innerHTML = '';
+  let i = 0;
+  const chars = codeHtml.split('');
+  function typeChar() {
+    if(i < chars.length) {
+      out.innerHTML = codeHtml.slice(0, i+1) + '<span class="typewriter"> </span>';
+      i += Math.floor(Math.random()*3)+1;
+      setTimeout(typeChar, 18);
+    } else {
+      out.innerHTML = codeHtml;
+    }
+  }
+  typeChar();
+}
 
-// ── CHAT MIC ──
-let chatRecog=null,chatMicOn=false;
-function toggleChatMic(){const mic=document.getElementById('cwMic'),inp=document.getElementById('cwIn');if(chatMicOn){chatMicOn=false;mic.classList.remove('active');mic.textContent='🎤';if(chatRecog){try{chatRecog.stop();}catch(e){}}return;}if(!('webkitSpeechRecognition'in window||'SpeechRecognition'in window)){inp.value='Speech recognition not supported.';return;}chatMicOn=true;mic.classList.add('active');mic.textContent='⏹';const SR=window.SpeechRecognition||window.webkitSpeechRecognition;chatRecog=new SR();chatRecog.continuous=false;chatRecog.interimResults=true;chatRecog.onresult=e=>{const t=Array.from(e.results).map(r=>r[0].transcript).join('');inp.value=t;if(e.results[e.results.length-1].isFinal){chatMicOn=false;mic.classList.remove('active');mic.textContent='🎤';sendChat();}};chatRecog.onerror=()=>{chatMicOn=false;mic.classList.remove('active');mic.textContent='🎤';};chatRecog.onend=()=>{chatMicOn=false;mic.classList.remove('active');mic.textContent='🎤';};chatRecog.start();}
+// ════════════════════════════════════════
+// DERMAI DEMO
+// ════════════════════════════════════════
+const dermSteps = ['Preprocessing image...','Normalising to 224×224...','Running ResNet-50 forward pass...','Applying softmax...','Generating confidence scores...'];
+const dermVals = [97, 2, 1, 0, 0];
 
-// ── TOAST ──
-function showToast(msg,type='success',dur=3500){const wrap=document.getElementById('toastWrap');const t=document.createElement('div');t.className=`toast ${type}`;t.innerHTML=`<span>${type==='success'?'✓':'✕'}</span><span>${msg}</span>`;wrap.appendChild(t);requestAnimationFrame(()=>requestAnimationFrame(()=>t.classList.add('show')));setTimeout(()=>{t.classList.remove('show');setTimeout(()=>t.remove(),350);},dur);}
+function runDermDemo() {
+  document.getElementById('dmDropWrap').style.display='none';
+  document.getElementById('dmAnalyzing').style.display='block';
+  let s=0;
+  const stepEl = document.getElementById('dmStep');
+  function nextDermStep() {
+    if(s < dermSteps.length) { stepEl.textContent=dermSteps[s]; s++; setTimeout(nextDermStep,600); }
+    else {
+      document.getElementById('dmAnalyzing').style.display='none';
+      document.getElementById('dmResults').style.display='block';
+      dermVals.forEach((v,i) => {
+        setTimeout(()=>{
+          document.getElementById('dc'+i).style.width=v+'%';
+          document.getElementById('dp'+i).textContent=v+'%';
+        }, i*120);
+      });
+    }
+  }
+  nextDermStep();
+}
+function resetDerm() {
+  document.getElementById('dmDropWrap').style.display='block';
+  document.getElementById('dmAnalyzing').style.display='none';
+  document.getElementById('dmResults').style.display='none';
+  dermVals.forEach((v,i)=>{ document.getElementById('dc'+i).style.width='0'; document.getElementById('dp'+i).textContent='—'; });
+}
 
-// ── CONTACT FORM ──
-function clearErr(id){const el=document.getElementById(id),err=document.getElementById('err-'+id);if(el)el.classList.remove('error');if(err)err.classList.remove('show');}
-function showErr(id,msg){const el=document.getElementById(id),err=document.getElementById('err-'+id);if(el)el.classList.add('error');if(err){if(msg)err.textContent=msg;err.classList.add('show');}return false;}
-async function submitContact(){const name=document.getElementById('cname').value.trim(),email=document.getElementById('cemail').value.trim(),msg=document.getElementById('cmsg').value.trim(),btn=document.getElementById('sendBtn');let valid=true;if(!name){showErr('cname','Please enter your name');valid=false;}if(!email||!/\S+@\S+\.\S+/.test(email)){showErr('cemail','Please enter a valid email');valid=false;}if(!msg){showErr('cmsg','Please write a message');valid=false;}if(!valid)return;btn.textContent='⏳ Sending...';btn.disabled=true;try{const res=await fetch('https://formspree.io/f/mpqnyeqj',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name,email,message:msg})});if(res.ok){btn.textContent='✓ Sent!';btn.style.cssText='background:var(--green);border-color:var(--green);width:100%;justify-content:center';['cname','cemail','cmsg'].forEach(id=>{document.getElementById(id).value='';clearErr(id);});showToast('🚀 Message sent! Sakshi will reply soon.','success',5000);setTimeout(()=>{btn.textContent='⟶ Send Message';btn.style.cssText='width:100%;justify-content:center';btn.disabled=false;},3000);}else{throw new Error();}}catch(e){btn.textContent='Try again';btn.style.cssText='background:#ef4444;border-color:#ef4444;width:100%;justify-content:center';showToast('Failed. Try emailing selmokarsakshi0@gmail.com directly','error',5000);setTimeout(()=>{btn.textContent='⟶ Send Message';btn.style.cssText='width:100%;justify-content:center';btn.disabled=false;},3000);}}
+// ════════════════════════════════════════
+// CHAT — VOICE INPUT MIC
+// ════════════════════════════════════════
+let chatRecog = null, chatMicOn = false;
+function toggleChatMic() {
+  const mic = document.getElementById('cwMic');
+  const inp = document.getElementById('cwIn');
+  if(chatMicOn) {
+    chatMicOn=false; mic.classList.remove('active'); mic.textContent='🎤';
+    if(chatRecog){try{chatRecog.stop();}catch(e){}}
+    return;
+  }
+  if(!('webkitSpeechRecognition' in window||'SpeechRecognition' in window)){
+    inp.value='Speech recognition not supported in this browser.'; return;
+  }
+  chatMicOn=true; mic.classList.add('active'); mic.textContent='⏹';
+  const SR = window.SpeechRecognition||window.webkitSpeechRecognition;
+  chatRecog = new SR();
+  chatRecog.continuous=false; chatRecog.interimResults=true;
+  chatRecog.onresult=e=>{
+    const t=Array.from(e.results).map(r=>r[0].transcript).join('');
+    inp.value=t;
+    if(e.results[e.results.length-1].isFinal){ chatMicOn=false; mic.classList.remove('active'); mic.textContent='🎤'; sendChat(); }
+  };
+  chatRecog.onerror=()=>{ chatMicOn=false; mic.classList.remove('active'); mic.textContent='🎤'; };
+  chatRecog.onend=()=>{ chatMicOn=false; mic.classList.remove('active'); mic.textContent='🎤'; };
+  chatRecog.start();
+}
 
-// ── CHAR COUNTER ──
-function updateCounter(){const inp=document.getElementById('cwIn'),cnt=document.getElementById('cwCounter');if(!inp||!cnt)return;const len=inp.value.length;cnt.textContent=len>0?`${len} chars · Enter ↵ to send`:'';cnt.style.color=len>400?'#ef4444':'var(--t3)';}
+// Update cpItems to include AI Labs
+cpItems.push(
+  {l:'AI Labs — StudyGenie',i:'📚',m:'lab',a:()=>openLab('sg')},
+  {l:'AI Labs — AirFlow AI',i:'✋',m:'lab',a:()=>openLab('af')},
+  {l:'AI Labs — DermAI',i:'🔬',m:'lab',a:()=>openLab('dm')},
+  {l:'Interactive AI Labs section',i:'⚗️',m:'nav',a:()=>go('ailabs')},
+  {l:'Resume',i:'📄',m:'nav',a:()=>go('resume')},
+  {l:'Download Resume',i:'↓',m:'action',a:()=>document.querySelector('a[download]')?.click()}
+);
+function go(id){document.getElementById(id)?.scrollIntoView({behavior:'smooth'});}
 
-// ── SCROLL / NAV ──
-window.addEventListener('scroll',()=>{const y=window.scrollY,total=document.body.scrollHeight-window.innerHeight;const bar=document.getElementById('scrollBar');if(bar)bar.style.width=(total>0?(y/total)*100:0)+'%';const bt=document.getElementById('backTop');if(bt)bt.classList.toggle('show',y>400);['home','experience','projects','ailabs','chat','timeline','resume','contact'].forEach(id=>{const el=document.getElementById(id);if(!el)return;const top=el.offsetTop-70,bot=top+el.offsetHeight;const lnk=document.querySelector(`.nl[onclick*="'${id}'"]`);if(lnk)lnk.classList.toggle('on',y>=top&&y<bot);});},{passive:true});
+// ════════════════════════════════════════
+// TOAST
+// ════════════════════════════════════════
+function showToast(msg, type='success', dur=3500) {
+  const wrap = document.getElementById('toastWrap');
+  const t = document.createElement('div');
+  t.className = `toast ${type}`;
+  t.innerHTML = `<span>${type==='success'?'✓':'✕'}</span><span>${msg}</span>`;
+  wrap.appendChild(t);
+  requestAnimationFrame(()=>requestAnimationFrame(()=>t.classList.add('show')));
+  setTimeout(()=>{ t.classList.remove('show'); setTimeout(()=>t.remove(),350); }, dur);
+}
+
+// ════════════════════════════════════════
+// CONTACT FORM — Formspree + validation
+// ════════════════════════════════════════
+function clearErr(id){
+  const el=document.getElementById(id),err=document.getElementById('err-'+id);
+  if(el)el.classList.remove('error');if(err)err.classList.remove('show');
+}
+function showErr(id,msg){
+  const el=document.getElementById(id),err=document.getElementById('err-'+id);
+  if(el)el.classList.add('error');
+  if(err){if(msg)err.textContent=msg;err.classList.add('show');}
+  return false;
+}
+
+async function submitContact() {
+  const name  = document.getElementById('cname').value.trim();
+  const email = document.getElementById('cemail').value.trim();
+  const msg   = document.getElementById('cmsg').value.trim();
+  const btn   = document.getElementById('sendBtn');
+
+  // inline validation
+  let valid = true;
+  if(!name) { showErr('cname','Please enter your name'); valid=false; }
+  if(!email||!/\S+@\S+\.\S+/.test(email)) { showErr('cemail','Please enter a valid email address'); valid=false; }
+  if(!msg) { showErr('cmsg','Please write a message'); valid=false; }
+  if(!valid) return;
+
+  btn.textContent = '⏳ Sending...'; btn.disabled = true;
+
+  try {
+    const res = await fetch('https://formspree.io/f/mpqnyeqj', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name, email, message: msg })
+    });
+    if(res.ok) {
+      btn.textContent = '✓ Sent!';
+      btn.style.cssText = 'background:var(--green);border-color:var(--green);width:100%;justify-content:center';
+      ['cname','cemail','cmsg'].forEach(id => { document.getElementById(id).value=''; clearErr(id); });
+      showToast(`🚀 Sakshi got your message! She'll get back to you soon — probably after deploying a model 😄`, 'success', 5000);
+      setTimeout(()=>{ btn.textContent='⟶ Send Message'; btn.style.cssText='width:100%;justify-content:center'; btn.disabled=false; }, 3000);
+    } else { throw new Error(); }
+  } catch(e) {
+    btn.textContent = 'Try again';
+    btn.style.cssText = 'background:#ef4444;border-color:#ef4444;width:100%;justify-content:center';
+    showToast('Message failed to send. Try emailing selmokarsakshi0@gmail.com directly 📧', 'error', 5000);
+    setTimeout(()=>{ btn.textContent='⟶ Send Message'; btn.style.cssText='width:100%;justify-content:center'; btn.disabled=false; }, 3000);
+  }
+}
+
+// ════════════════════════════════════════
+// CHAR COUNTER
+// ════════════════════════════════════════
+function updateCounter() {
+  const inp = document.getElementById('cwIn');
+  const cnt = document.getElementById('cwCounter');
+  if(!inp||!cnt) return;
+  const len = inp.value.length;
+  cnt.textContent = len > 0 ? `${len} chars · Enter ↵ to send` : '';
+  cnt.style.color = len > 400 ? '#ef4444' : 'var(--t3)';
+}
+
+// ════════════════════════════════════════
+// SCROLL PROGRESS + BACK TO TOP + NAV
+// ════════════════════════════════════════
+window.addEventListener('scroll',()=>{
+  const y = window.scrollY;
+  const total = document.body.scrollHeight - window.innerHeight;
+  const bar = document.getElementById('scrollBar');
+  if(bar) bar.style.width = (total>0 ? (y/total)*100 : 0)+'%';
+  const bt = document.getElementById('backTop');
+  if(bt) bt.classList.toggle('show', y > 400);
+  ['home','experience','projects','ailabs','chat','timeline','resume','contact'].forEach(id=>{
+    const el=document.getElementById(id);if(!el)return;
+    const top=el.offsetTop-70,bot=top+el.offsetHeight;
+    const lnk=document.querySelector(`.nl[onclick*="'${id}'"]`);
+    if(lnk)lnk.classList.toggle('on',y>=top&&y<bot);
+  });
+},{passive:true});
 
 setInterval(()=>{const el=document.getElementById('clk');if(el)el.textContent=new Date().toLocaleTimeString('en-US',{hour12:false});},1000);
 </script>
